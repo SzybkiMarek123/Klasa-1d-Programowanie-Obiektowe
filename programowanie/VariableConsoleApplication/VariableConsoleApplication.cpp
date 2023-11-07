@@ -1,7 +1,7 @@
 #include <iostream>
 
 //Napisz program który wczyta od u¿ytkownika jego wiek i wyœwietli go na konsol.
-void task1 ()
+void task1()
 {
 	short AgeFromUser;
 	std::cout << "Podaj swój wiek \n";
@@ -13,12 +13,23 @@ void task1 ()
 void task2()
 {
 	float lenghtInMeterFromUser;
-	std::count << "Podaj d³ugoœæ w metrach: ";
+	std::cout << "Podaj d³ugosc w metrach: ";
 	std::cin >> lenghtInMeterFromUser;
 
-	float lenghtInCentimeter
-	lenghtInCentimeter = lenghtInMeterFromUser / 100;
-	std::cout << "D³ugoœæ w centymetrach wynosi" << lenghtInCentimeter;
+	float lenghtInCentimiterFromUser;
+	lenghtInCentimiterFromUser = lenghtInMeterFromUser * 100;
+
+	float lenghtInMilimiterFromUser;
+	lenghtInMilimiterFromUser = lenghtInCentimiterFromUser * 10;
+
+	float lenghtKilometerFromUser;
+	lenghtKilometerFromUser = lenghtInMeterFromUser / 1000;
+
+	std::cout << "Metry:" << lenghtInMeterFromUser << "\n";
+	std::cout << "Centymetry:" << lenghtInCentimiterFromUser << "\n";
+	std::cout << "Milimetry:" << lenghtInMilimiterFromUser << "\n";
+	std::cout << "Kilometry:" << lenghtKilometerFromUser << "\n";
+
 }
 int main()
 {
@@ -26,7 +37,7 @@ int main()
 	task2();
 }
 /*
-Algorytm- zbiór instrukcji realizuj¹cy postawiony przed nim zadanie.
+Algorytm- skoñczony zbiór instrukcji realizuj¹cy postawiony przed nim zadanie. Kolejnoœæ instrukcji w zbiorze jest okreœlona
 Sposoby zapisania:
 * w punktach
 * opis s³owny
