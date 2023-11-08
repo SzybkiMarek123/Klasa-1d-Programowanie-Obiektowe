@@ -1,4 +1,30 @@
 #include <iostream>
+/*
+
+
+
+* Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy a, podstawy b i wysokoœci h trapezu, a nastêpnie obliczy pole tego trapezu, wyœwietlaj¹c wynik.
+
+* Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci krawêdzi szeœcianu i obliczy jego objêtoœæ, wyœwietlaj¹c wynik.
+
+* Napisz program, który poprosi u¿ytkownika o podanie temperatury w stopniach Celsiusza, a nastêpnie przeliczy j¹ na stopnie Fahrenheita i wyœwietli wynik.
+
+* Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
+
+* Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb (a, b) i obliczy œredni¹ arytmetyczn¹ tych liczb. Nastêpnie wyœwietli wynik.
+
+* Napisz program, który poprosi u¿ytkownika o podanie trzech liczb (a, b, c) i obliczy œredni¹ arytmetyczn¹ tych liczb. Nastêpnie wyœwietli wynik.
+
+* Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+
+* Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych. Nastêpnie wykona operacje (+, -, *, /) i wyœwietli wyniki.
+
+* Napisz program, który poprosi u¿ytkownika o podanie liczby sekund i przeliczy je na godziny i minuty, wyœwietlaj¹c wynik.
+
+* Napisz program, który poprosi u¿ytkownika o podanie wspó³rzêdnych (x1, y1) i (x2, y2) dwóch punktów w uk³adzie kartezjañskim, a nastêpnie obliczy odleg³oœæ miêdzy nimi, wyœwietlaj¹c wynik.
+
+
+*/
 
 //Napisz program który wczyta od u¿ytkownika jego wiek i wyœwietli go na konsol.
 void task1()
@@ -31,10 +57,62 @@ void task2()
 	std::cout << "Kilometry:" << lenghtKilometerFromUser << "\n";
 
 }
+
+//*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci boku a i b prostok¹ta, a nastêpnie obliczy i wyœwietli pole prostok¹ta.
+void task3()
+{
+	float lenghtSideAFromUser;
+	float lenghtSideBFromUser;
+	float rectangleArea;
+
+	std::cout << "Podaj d³ugoœæ pierwszego boku: " ;
+	std::cin >> lenghtSideAFromUser ;
+
+	std::cout << "Podaj d³ugoœæ drugiego boku: ";
+	std::cin >> lenghtSideBFromUser ;
+	
+	rectangleArea = lenghtSideAFromUser * lenghtSideBFromUser;
+	std::cout << "Pole prostok¹ta wynosi: " << rectangleArea ;
+}
+
+//*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy i wysokoœci trójk¹ta, a nastêpnie obliczy pole tego trójk¹ta, wyœwietlaj¹c wynik.
+void task4()
+{
+	float lenghtSideAFromUser ;
+	float lenghtHeightHFromUser ;
+	float triangleArea ;
+
+	std::cout << "Podaj d³ugoœæ podstawy trójk¹ta: ";
+	std::cin >> lenghtSideAFromUser ;
+
+	std::cout << "Podaj wysokoœæ trójk¹ta ";
+	std::cin >> lenghtHeightHFromUser ;
+
+	triangleArea = lenghtSideAFromUser * lenghtHeightHFromUser / 2 ;
+	std::cout << "Pole trójk¹ta wynosi: " << triangleArea;
+}
+
+//*Napisz program, który poprosi u¿ytkownika o podanie promienia ko³a i obliczy pole tego ko³a, wyœwietlaj¹c wynik.
+void task5()
+{
+	float lenghtRadiusFromUser;
+	float circleArea;
+
+	std::cout << "Podaj d³ugoœæ promienia: ";
+	std::cin >> lenghtRadiusFromUser ;
+
+	circleArea = lenghtRadiusFromUser * lenghtRadiusFromUser * 3.14;
+	std::cout << "Pole ko³a wynosi: " << circleArea ;
+}
+
 int main()
 {
+	setlocale(LC_CTYPE, "polish");
 	//task1();
-	task2();
+	//task2();
+	//task3();
+	//task4();
+	task5();
 }
 /*
 Algorytm- skoñczony zbiór instrukcji realizuj¹cy postawiony przed nim zadanie. Kolejnoœæ instrukcji w zbiorze jest okreœlona
