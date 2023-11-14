@@ -1,28 +1,11 @@
 #include <iostream>
 /*
 
-
-
-* Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy a, podstawy b i wysokoœci h trapezu, a nastêpnie obliczy pole tego trapezu, wyœwietlaj¹c wynik.
-
-* Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci krawêdzi szeœcianu i obliczy jego objêtoœæ, wyœwietlaj¹c wynik.
-
-* Napisz program, który poprosi u¿ytkownika o podanie temperatury w stopniach Celsiusza, a nastêpnie przeliczy j¹ na stopnie Fahrenheita i wyœwietli wynik.
-
-* Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
-
-* Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb (a, b) i obliczy œredni¹ arytmetyczn¹ tych liczb. Nastêpnie wyœwietli wynik.
-
-* Napisz program, który poprosi u¿ytkownika o podanie trzech liczb (a, b, c) i obliczy œredni¹ arytmetyczn¹ tych liczb. Nastêpnie wyœwietli wynik.
-
-* Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
-
 * Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych. Nastêpnie wykona operacje (+, -, *, /) i wyœwietli wyniki.
 
 * Napisz program, który poprosi u¿ytkownika o podanie liczby sekund i przeliczy je na godziny i minuty, wyœwietlaj¹c wynik.
 
 * Napisz program, który poprosi u¿ytkownika o podanie wspó³rzêdnych (x1, y1) i (x2, y2) dwóch punktów w uk³adzie kartezjañskim, a nastêpnie obliczy odleg³oœæ miêdzy nimi, wyœwietlaj¹c wynik.
-
 
 */
 
@@ -57,7 +40,6 @@ void task2()
 	std::cout << "Kilometry:" << lenghtKilometerFromUser << "\n";
 
 }
-
 //*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci boku a i b prostok¹ta, a nastêpnie obliczy i wyœwietli pole prostok¹ta.
 void task3()
 {
@@ -65,33 +47,31 @@ void task3()
 	float lenghtSideBFromUser;
 	float rectangleArea;
 
-	std::cout << "Podaj d³ugoœæ pierwszego boku: " ;
-	std::cin >> lenghtSideAFromUser ;
+	std::cout << "Podaj d³ugoœæ pierwszego boku: ";
+	std::cin >> lenghtSideAFromUser;
 
 	std::cout << "Podaj d³ugoœæ drugiego boku: ";
-	std::cin >> lenghtSideBFromUser ;
-	
-	rectangleArea = lenghtSideAFromUser * lenghtSideBFromUser;
-	std::cout << "Pole prostok¹ta wynosi: " << rectangleArea ;
-}
+	std::cin >> lenghtSideBFromUser;
 
+	rectangleArea = lenghtSideAFromUser * lenghtSideBFromUser;
+	std::cout << "Pole prostok¹ta wynosi: " << rectangleArea;
+}
 //*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy i wysokoœci trójk¹ta, a nastêpnie obliczy pole tego trójk¹ta, wyœwietlaj¹c wynik.
 void task4()
 {
-	float lenghtSideAFromUser ;
-	float lenghtHeightHFromUser ;
-	float triangleArea ;
+	float lenghtSideAFromUser;
+	float lenghtHeightHFromUser;
+	float triangleArea;
 
 	std::cout << "Podaj d³ugoœæ podstawy trójk¹ta: ";
-	std::cin >> lenghtSideAFromUser ;
+	std::cin >> lenghtSideAFromUser;
 
 	std::cout << "Podaj wysokoœæ trójk¹ta ";
-	std::cin >> lenghtHeightHFromUser ;
+	std::cin >> lenghtHeightHFromUser;
 
-	triangleArea = lenghtSideAFromUser * lenghtHeightHFromUser / 2 ;
+	triangleArea = lenghtSideAFromUser * lenghtHeightHFromUser / 2;
 	std::cout << "Pole trójk¹ta wynosi: " << triangleArea;
 }
-
 //*Napisz program, który poprosi u¿ytkownika o podanie promienia ko³a i obliczy pole tego ko³a, wyœwietlaj¹c wynik.
 void task5()
 {
@@ -99,12 +79,133 @@ void task5()
 	float circleArea;
 
 	std::cout << "Podaj d³ugoœæ promienia: ";
-	std::cin >> lenghtRadiusFromUser ;
+	std::cin >> lenghtRadiusFromUser;
 
 	circleArea = lenghtRadiusFromUser * lenghtRadiusFromUser * 3.14;
-	std::cout << "Pole ko³a wynosi: " << circleArea ;
+	std::cout << "Pole ko³a wynosi: " << circleArea;
 }
+//*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy a, podstawy b i wysokoœci h trapezu, a nastêpnie obliczy pole tego trapezu, wyœwietlaj¹c wynik.
+void task6()
+{
+	float lenghtSideA;
+	float lenghtSideB;
+	float lenghtHeightH;
+	float trapezeArea;
 
+	std::cout << "Podaj d³ugoœæ pierwszej podstawy trapezu: ";
+	std::cin >> lenghtSideA;
+
+	std::cout << "Podaj d³ugoœæ drugiej podstawy trapezu: ";
+	std::cin >> lenghtSideB;
+
+	std::cout << "Podaj wysokoœæ trapezu ";
+	std::cin >> lenghtHeightH;
+
+	trapezeArea = (lenghtSideA + lenghtSideB) * lenghtHeightH / 2;
+	std::cout << "Pole trapeza wynosi: " << trapezeArea;
+}
+//*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci krawêdzi szeœcianu i obliczy jego objêtoœæ, wyœwietlaj¹c wynik.
+void task7()
+{
+	float lenghtEdge;
+	float cubeCapacity;
+
+	std::cout << "Podaj d³ugoœæ krawêdzi szeœcianu: ";
+	std::cin >> lenghtEdge;
+
+	cubeCapacity = lenghtEdge * lenghtEdge * lenghtEdge;
+	std::cout << "Objêtoœæ szeœcianu wynosi: " << cubeCapacity;
+
+}
+//*Napisz program, który poprosi u¿ytkownika o podanie temperatury w stopniach Celsiusza, a nastêpnie przeliczy j¹ na stopnie Fahrenheita i wyœwietli wynik.
+void task8()
+{
+	float degreesCelcius;
+	float degreesFarenheit;
+
+	std::cout << "Podaj temperature w stopniach celcjusza: ";
+	std::cin >> degreesCelcius;
+
+	degreesFarenheit = 1.8 * degreesCelcius + 32;
+
+	std::cout << "Podaj temperature w stopniach Farenheit wynosi: " << degreesFarenheit;
+
+}
+//*Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
+void task9()
+{
+	float amountInPln;
+	float amountInEuro;
+	std::cout << "Podaj kwote w euro: ";
+	std::cin >> amountInEuro;
+
+	amountInPln = amountInEuro * 4.42;
+	std::cout << "Kwota w z³otówkach wynosi:" << amountInPln;
+}
+//*Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb(a, b) i obliczy œredni¹ arytmetyczn¹ tych liczb.Nastêpnie wyœwietli wynik.
+void task10()
+{
+	float numberA;
+	float numberB;
+	float arithmeticAverage;
+
+	std::cout << "Podaj pierwsz¹ liczbe";
+	std::cin >> numberA;
+
+	std::cout << "Podaj drug¹ liczbe";
+	std::cin >> numberB;
+
+	arithmeticAverage = (numberA + numberB) / 2;
+
+	std::cout << "Srednia wynosi" << arithmeticAverage;
+}
+//*Napisz program, który poprosi u¿ytkownika o podanie trzech liczb(a, b, c) i obliczy œredni¹ arytmetyczn¹ tych liczb.Nastêpnie wyœwietli wynik.
+void task11()
+{
+	float numberA;
+	float numberB;
+	float numberC;
+	float arithmeticAverage;
+
+	std::cout << "Podaj pierwsz¹ liczbe";
+	std::cin >> numberA;
+
+	std::cout << "Podaj drug¹ liczbe";
+	std::cin >> numberB;
+
+	std::cout << "Podaj trzeci¹ liczbe";
+	std::cin >> numberC;
+
+	arithmeticAverage = (numberA + numberB + numberC) / 3;
+	std::cout << "Srednia wynosi" << arithmeticAverage;
+}
+//*Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+void task12()
+{
+	float numberA;
+	float weightNumberA;
+	float numberB;
+	float weightNumberB;
+	float numberC;
+	float weightNumberC;
+	float weightedAverage;
+
+	std::cout << "Podaj pierwsz¹ liczbe";
+	std::cin >> numberA;
+	std::cout << "Podaj pierwsz¹ wage";
+	std::cin >> weightNumberA;
+
+	std::cout << "Podaj drug¹ liczbe";
+	std::cin >> numberB;
+	std::cout << "Podaj drug¹ wage";
+	std::cin >> weightNumberB ;
+
+	std::cout << "Podaj trzeci¹ liczbe";
+	std::cin >> numberC;
+	std::cout << "Podaj trzeci¹ wage";
+	std::cin >> weightNumberC;
+
+}
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
@@ -112,7 +213,14 @@ int main()
 	//task2();
 	//task3();
 	//task4();
-	task5();
+	//task5();
+	//task6();
+	//task7();
+	//task8();
+	//task9();
+	//task10();
+	//task11();
+	task12();
 }
 /*
 Algorytm- skoñczony zbiór instrukcji realizuj¹cy postawiony przed nim zadanie. Kolejnoœæ instrukcji w zbiorze jest okreœlona
