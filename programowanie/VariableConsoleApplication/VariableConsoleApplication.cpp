@@ -128,7 +128,7 @@ void task8()
 
 	degreesFarenheit = 1.8 * degreesCelcius + 32;
 
-	std::cout << "Podaj temperature w stopniach Farenheit wynosi: " << degreesFarenheit;
+	std::cout << "Temperatura w stopniach Farenheit wynosi: " << degreesFarenheit;
 
 }
 //*Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
