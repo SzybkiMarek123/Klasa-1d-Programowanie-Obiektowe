@@ -28,7 +28,9 @@ int main()
 {
     //task1();
     //task2();
-    task3();
+    //task3();
+    //task4();
+    task5();
 }
 void task1()
 {
@@ -80,4 +82,46 @@ void task3()
         std::cout << "Liczba nie jest w zakresie";
     }
 }
+//Napisz program, który wczyta jedn¹ wartoœæ i wyœwietli najwiêksz¹ z nich.
+void task4()
+{
+    int firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
 
+    std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
+}
+void task5()
+{
+    int firstNumber;
+    int secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+
+    if (secondNumber > firstNumber)
+    std::cout << "Najwiêksza wartoœæ to " << secondNumber << "\n";
+    else
+    std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
+}
+void task6()
+{
+    int firstNumber, secondNumber, thirdNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> thirdNumber;
+
+    if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+        std::cout << "Najwiêksza wartoœæ to " << thirdNumber << "\n";
+    else
+    {
+        if (secondNumber > firstNumber)
+            std::cout << "Najwiêksza wartoœæ to " << secondNumber << "\n";
+        else
+            std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
+    }
+}
