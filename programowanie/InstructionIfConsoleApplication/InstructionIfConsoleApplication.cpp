@@ -125,3 +125,4 @@ void task6()
             std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
     }
 }
+//aa
