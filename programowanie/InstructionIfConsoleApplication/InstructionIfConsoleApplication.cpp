@@ -30,7 +30,9 @@ int main()
     //task2();
     //task3();
     //task4();
-    task5();
+    //task5();
+    //task6();
+    task7();
 }
 void task1()
 {
@@ -125,4 +127,32 @@ void task6()
             std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
     }
 }
-//aaa
+void task7()
+{
+    int firstNumber, secondNumber, thirdNumber, fourthNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> thirdNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> fourthNumber;
+
+    if (fourthNumber > firstNumber && fourthNumber > secondNumber && fourthNumber > thirdNumber)
+    {
+        std::cout << "Najwiêksza wartoœæ to " << fourthNumber << "\n";
+    }
+    else 
+    {
+        if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+            std::cout << "Najwiêksza wartoœæ to " << thirdNumber << "\n";
+        else
+        {
+            if (secondNumber > firstNumber)
+                std::cout << "Najwiêksza wartoœæ to " << secondNumber << "\n";
+            else
+                std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
+        }
+    }
+}
