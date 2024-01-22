@@ -1,5 +1,28 @@
 #include <iostream>
 /*
+* Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
+Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
+BMI = masa/wzrost^2
+poni¿ej 16 - wyg³odzenie
+16 - 16.99 - wychudzenie
+17 - 18.49 - niedowagê
+18.5 - 24.99 - wagê prawid³ow¹
+25.0 - 29.9 - nadwagê
+30.0 - 34.99 - I stopieñ oty³oœci
+35.0 - 39.99 - II stopieñ oty³oœci
+powy¿ej 40.0 - oty³oœæ skrajn¹
+
+* Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
+* Napisz program, który wczyta numer miesi¹ca i wyœwietli jego s³owny odpowiednik.
+* Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
+* Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
+* Napisz program, który poprosi u¿ytkownika o podanie wieku i sprawdzi, czy osoba jest pe³noletnia. Wyœwietl odpowiedni komunikat.
+* Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
+* Napisz program, który poprosi u¿ytkownika o podanie oceny w skali 100-punktowej i przeliczy j¹ na ocenê procentow¹ w przedziale od 0 do 100. Wyœwietl wynik.
+* Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej oceny (np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
+* Napisz program, który na podstawie wspó³czynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwi¹zania rzeczywiste, i jeœli tak, to je obliczy.
+* Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)
+/*
 Operatory porównania:
 >   wiêkszoœci
 <   mniejszoœci
@@ -32,7 +55,13 @@ int main()
     //task4();
     //task5();
     //task6();
-    task7();
+    //task7();
+    //task8();
+    //task9();
+    //task10();
+    //task11();
+    //task12();
+    task12();
 }
 void task1()
 {
@@ -155,4 +184,79 @@ void task7()
                 std::cout << "Najwiêksza wartoœæ to " << firstNumber << "\n";
         }
     }
+}
+void task8() 
+{
+    int firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+
+    std::cout << "Liczby w kolejnoœci rosn¹cej: \n";
+    std::cout << firstNumber;
+
+    std::cout << "\n";
+}
+void task9()
+{
+    int firstNumber, secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+
+    std::cout << "Liczby w kolejnoœci rosn¹cej: \n";
+
+    if (firstNumber > secondNumber)
+        std::cout << secondNumber <<"," << firstNumber << "\n";
+    else
+        std::cout << firstNumber <<"," << secondNumber << "\n";
+}
+void task10()
+{
+    int firstNumber, secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+
+    std::cout << "Liczby w kolejnoœci rosn¹cej: \n";
+
+    if (firstNumber > secondNumber)
+        std::cout << secondNumber << "," << firstNumber << "\n";
+    else
+        std::cout << firstNumber << "," << secondNumber << "\n";
+}
+//* Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i sprawdzi, czy s¹ one równe. Wyœwietl odpowiedni komunikat.
+void task11()
+{
+    int firstNumber, secondNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj liczbe \n";
+    std::cin >> secondNumber;
+    if (firstNumber == secondNumber)
+        std::cout << "Liczby s¹ równe";
+    else
+        std::cout << "Liczby s¹ ró¿ne";
+}
+//* Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona parzysta. Wyœwietl odpowiedni komunikat.
+void task12() 
+{
+    int numberFromUser;
+    std::cout << "Podaj liczbe, aby sprawdziæ czy ejst parzysta \n";
+    std::cout << "Podaj liczbe \n";
+    std::cin >> numberFromUser;
+    if (numberFromUser % 2 == 0)
+        std::cout << "Liczba jest parzysta";
+    else
+        std::cout << "Liczba nie jest parzaysta";
+}
+//*Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
+void task13() 
+{
+    int numberFromUser;
+    std::cout << "Podaj liczbe, aby sprawdziæ czy jest podzielna przez 3 i 5 \n";
+    std::cout << "Podaj liczbe \n";
+    std::cin >> numberFromUser;
+    if()
 }
