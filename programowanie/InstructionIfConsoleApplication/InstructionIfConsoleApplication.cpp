@@ -246,8 +246,7 @@ void task13()
 	else
 		std::cout << "Liczba nie jest podzielna";
 }
-/*Napisz program, który poprosi użytkownika o podanie masy ciała(w kilogramach) i wzrostu(w metrach).
-Na podstawie tych danych oblicz wskaźnik BMI(Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.*/
+//*Napisz program, który poprosi użytkownika o podanie masy ciała(w kilogramach) i wzrostu(w metrach). Na podstawie tych danych oblicz wskaźnik BMI(Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
 void task14()
 {
 	float weightFromUser, heightFromUser, BMI;
@@ -299,8 +298,10 @@ void task15()
 		std::cout << "Piątek";
 	if (numberFromUser == 6)
 		std::cout << "Sobota";
-	else
+	if (numberFromUser == 7)
 		std::cout << "Niedziela";
+	if (numberFromUser > 7)
+		std::cout << "Błędna data";
 }
 //*Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
 void task16()
