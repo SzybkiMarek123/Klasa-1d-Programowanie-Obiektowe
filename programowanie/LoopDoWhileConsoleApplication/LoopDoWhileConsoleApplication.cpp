@@ -10,7 +10,6 @@ void task1()
 	} while (number < 0);
 	std::cout << "Podano liczbę " << number << "\n";
 }
-
 //Napisz program, który wylosuje liczbę, a następnie użytkownik będzie musiał odgadnąć
 void task2()
 {
@@ -36,7 +35,6 @@ void task2()
 			std::cout << "Zgadłeś " << "po " << userAttempt << " próbach.\n" << "Wylosowana liczba jest: " << randomNumber << "\n";
 	} while (numberFromUser != randomNumber);
 }
-
 //Napisz program wyświetlający liczby całkowite z przediału <0; x>, x podaje użytkownik;
 void task3()
 {
@@ -52,7 +50,7 @@ void task3()
 		number++;
 	} while (upperRange >= number);
 }
-//Napisz program, który policzy sumê cyfr podanej przez u¿ytkownika liczby.
+//Napisz program, który policzy sumę cyfr podanej przez u¿ytkownika liczby.
 void task4()
 {
 	int number, rest, sumOfDigits = 0;
@@ -73,7 +71,6 @@ void task4()
 
 	std::cout << "\nSuma cyfr wynosi: " << sumOfDigits;
 }
-
 //Napisz program, który poprosi użytkownika o wprowadzenie dowolnej liczby całkowitej.Następnie program powinien obliczyć i wyświetlić liczbę cyfr.
 void task5()
 {
@@ -93,7 +90,6 @@ void task5()
 
 	std::cout << "Ilość cyfr wynosi: " << number2;
 }
-
 //Napisz program, który sprawdza czy więcej jest cyfr parzystych, czy nieparzystych we wczytanej liczbie.
 void task6()
 {
@@ -124,7 +120,6 @@ void task6()
 		std::cout << "liczb parzystych i nieparzystych jest tyle samo.";
 
 }
-
 //Poproś użytkownika o podawanie liczb, aż wprowadzi zero. Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
 void task7()
 {
@@ -156,4 +151,3 @@ int main()
 	//task6();
 	//task7();
 }
-//
