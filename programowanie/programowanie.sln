@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Kolekcje", "03. Kolekcj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CharactersConsoleApplication", "CharactersConsoleApplication\CharactersConsoleApplication.vcxproj", "{CD2172F8-05D5-4E32-84B7-94C7EC62D604}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayConsoleApplication", "ArrayConsoleApplication\ArrayConsoleApplication.vcxproj", "{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -99,6 +101,14 @@ Global
 		{CD2172F8-05D5-4E32-84B7-94C7EC62D604}.Release|x64.Build.0 = Release|x64
 		{CD2172F8-05D5-4E32-84B7-94C7EC62D604}.Release|x86.ActiveCfg = Release|Win32
 		{CD2172F8-05D5-4E32-84B7-94C7EC62D604}.Release|x86.Build.0 = Release|Win32
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Debug|x64.ActiveCfg = Debug|x64
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Debug|x64.Build.0 = Debug|x64
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Debug|x86.ActiveCfg = Debug|Win32
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Debug|x86.Build.0 = Debug|Win32
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Release|x64.ActiveCfg = Release|x64
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Release|x64.Build.0 = Release|x64
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Release|x86.ActiveCfg = Release|Win32
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +122,7 @@ Global
 		{B5A12839-1A27-4A88-9C08-30F83C01144B} = {87974935-148C-4FC1-9D36-AA4D6F7B12CA}
 		{7F7914F4-57E3-4649-BC58-2B10012DE0C5} = {87974935-148C-4FC1-9D36-AA4D6F7B12CA}
 		{CD2172F8-05D5-4E32-84B7-94C7EC62D604} = {9E98C45E-5D62-4BB5-A700-7F3862B9D794}
+		{11D6AC7E-743A-4968-B50A-05D58DC1FE3A} = {9E98C45E-5D62-4BB5-A700-7F3862B9D794}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA18A03F-57C8-4391-9A00-F69DB3B43BB7}
