@@ -11,7 +11,7 @@ Funkcja - zbiór instrukcji. Definicja/deklaracja funkcji składa się z dwóch 
 typZwracany nazwaFuncji(parametry)
 {
 	//ciało funkcji
-}a
+}
 */
 
 void showHello()
