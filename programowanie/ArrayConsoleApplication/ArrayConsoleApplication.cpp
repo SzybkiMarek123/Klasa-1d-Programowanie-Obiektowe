@@ -74,7 +74,7 @@ void task3()
     }
     std::cout << "Najmniejsza liczba pod względem wielkości w tablicy wynosi: " << min << "\n";
 }
-void task4() 
+void task4()
 {
     int numberFromUser;
     std::cout << "Podaj numer dnia tygodnia: \n";
@@ -97,9 +97,45 @@ void task4()
         std::cout << "Nie ma takiego dnia\n";
     }
 }
+void task7()
+{
+    const unsigned int ARRAY_NUMBER_SIZE = 10;
+
+    srand(time(NULL));
+
+    std::cout << "Liczby w kolekcji: \n";
+    int numbers[ARRAY_NUMBER_SIZE];
+    for (int i = 0; i < ARRAY_NUMBER_SIZE; i++)
+    {
+        numbers[i] = rand() % 100;
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n\n";
+
+    for (int i = 0; i < ARRAY_NUMBER_SIZE - 1; i++)
+    {
+        int minIndex = i;
+        for (int j = i + 1; j < ARRAY_NUMBER_SIZE; j++)
+        {
+            if (numbers[j] < numbers[minIndex])
+                minIndex = j;
+        }
+        int tmp = numbers[i];
+        numbers[i] = numbers[minIndex];
+        numbers[minIndex] = tmp;
+    }
+
+    std::cout << "Po sortowaniu:\n";
+    for (int i = 0; i < ARRAY_NUMBER_SIZE; i++)
+    {
+        std::cout << numbers[i] << ", ";
+    }
+}
+
 int main()
 {
     //task1();
     //task2();
-    task3();
+    //task3();
+    task4();
 }
