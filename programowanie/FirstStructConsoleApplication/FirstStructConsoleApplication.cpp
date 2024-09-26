@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Task1.h"
+#include "Tasks.h"
 
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
-	task1();
+	//task2Namespace::task2();
+	task3();
 }
-//aaaaaaaaaa
