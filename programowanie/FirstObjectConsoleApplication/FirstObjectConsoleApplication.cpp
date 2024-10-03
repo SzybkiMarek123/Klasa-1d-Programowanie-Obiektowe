@@ -1,37 +1,39 @@
 ﻿#include <iostream>
 
-struct bankAccount
+class BankAccount
 {
+public:
 	double balance; // stan konta
 	std::string owner; //właściciel
 	std::string currency; // waluta
+
+	void AccountInformation()
+	{
+		std::cout << "Informacje o koncie bankowym.\n";
+		std::cout << "Właściciel: " << owner << "\n";
+		std::cout << "Saldo: " << balance << " " << currency << "\n\n";
+	}
 };
 
-void accountInformation(bankAccount& account)
-{
-	std::cout << "Informacje o koncie bankowym.\n";
-	std::cout << "W³aœciciel: " << account.owner << "\n";
-	std::cout << "Saldo: " << account.balance << " " << account.currency << "\n\n";
-}
-
-void depositToAccount(bankAccount& account, double amount)
+void depositToAccount(BankAccount& account, double amount)
 {
 	amount = abs(amount);
 	account.balance = account.balance + amount;
 }
 
-bool widthDrawFromAccount(bankAccount& account, double amount)
+bool widthDrawFromAccount(BankAccount& account, double amount)
 {
 	amount = abs(amount);
 	if (account.balance - amount >= 0)
 	{
+
 		account.balance = account.balance - amount;
 		return true;
 	}
 	return false;
 }
 
-void transferBetweenAccounts(bankAccount& sourceAccount, bankAccount& targetAccount, double amount)
+void transferBetweenAccounts(BankAccount& sourceAccount, BankAccount& targetAccount, double amount)
 {
 	if (widthDrawFromAccount(sourceAccount, amount) == true)
 		depositToAccount(targetAccount, amount);
@@ -39,5 +41,32 @@ void transferBetweenAccounts(bankAccount& sourceAccount, bankAccount& targetAcco
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	setlocale(LC_CTYPE, "polish");
+	BankAccount firstAccount;
+	firstAccount.balance = 10000;
+	firstAccount.owner = "Jan Kowalski";
+	firstAccount.currency = "z³";
+
+	firstAccount.AccountInformation();
+	//accountInformation(firstAccount);
+
+	depositToAccount(firstAccount, 500);
+
+	firstAccount.AccountInformation();
+
+	BankAccount secondAccount;
+	secondAccount.balance = 15000;
+	secondAccount.owner = "Ewa Kowalska";
+	secondAccount.currency = "z³";
+
+	secondAccount.AccountInformation();
+
+	widthDrawFromAccount(secondAccount, 500);
+
+	secondAccount.AccountInformation();
+
+	transferBetweenAccounts(secondAccount, firstAccount, 1000);
+
+	firstAccount.AccountInformation();
+	secondAccount.AccountInformation();
 }
