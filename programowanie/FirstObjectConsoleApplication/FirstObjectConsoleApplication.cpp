@@ -1,43 +1,5 @@
 ﻿#include <iostream>
-
-class BankAccount
-{
-public:
-	double balance; // stan konta
-	std::string owner; //właściciel
-	std::string currency; // waluta
-
-	void AccountInformation()
-	{
-		std::cout << "Informacje o koncie bankowym.\n";
-		std::cout << "Właściciel: " << owner << "\n";
-		std::cout << "Saldo: " << balance << " " << currency << "\n\n";
-	}
-};
-
-void depositToAccount(BankAccount& account, double amount)
-{
-	amount = abs(amount);
-	account.balance = account.balance + amount;
-}
-
-bool widthDrawFromAccount(BankAccount& account, double amount)
-{
-	amount = abs(amount);
-	if (account.balance - amount >= 0)
-	{
-
-		account.balance = account.balance - amount;
-		return true;
-	}
-	return false;
-}
-
-void transferBetweenAccounts(BankAccount& sourceAccount, BankAccount& targetAccount, double amount)
-{
-	if (widthDrawFromAccount(sourceAccount, amount) == true)
-		depositToAccount(targetAccount, amount);
-}
+#include "BankAccount.h"
 
 int main()
 {
@@ -50,7 +12,8 @@ int main()
 	firstAccount.AccountInformation();
 	//accountInformation(firstAccount);
 
-	depositToAccount(firstAccount, 500);
+	firstAccount.DepositToAccount(500);
+	//depositToAccount(firstAccount, 500);
 
 	firstAccount.AccountInformation();
 
@@ -61,12 +24,13 @@ int main()
 
 	secondAccount.AccountInformation();
 
-	widthDrawFromAccount(secondAccount, 500);
+	secondAccount.WidthDrawFromAccount(500);
 
 	secondAccount.AccountInformation();
 
-	transferBetweenAccounts(secondAccount, firstAccount, 1000);
+	secondAccount.TransferBetweenAccounts(firstAccount, 1000);
 
 	firstAccount.AccountInformation();
+
 	secondAccount.AccountInformation();
 }
