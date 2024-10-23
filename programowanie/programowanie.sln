@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstObjectConsoleApplicati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReadAndWriteOnFileConsoleApplication", "ReadAndWriteOnFileConsoleApplication\ReadAndWriteOnFileConsoleApplication.vcxproj", "{524D45E4-08B5-402D-B762-6A11EA424D6C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringConsoleApplication", "StringConsoleApplication\StringConsoleApplication.vcxproj", "{914B7D17-2B9D-4314-828B-980BB28BCE97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{524D45E4-08B5-402D-B762-6A11EA424D6C}.Release|x64.Build.0 = Release|x64
 		{524D45E4-08B5-402D-B762-6A11EA424D6C}.Release|x86.ActiveCfg = Release|Win32
 		{524D45E4-08B5-402D-B762-6A11EA424D6C}.Release|x86.Build.0 = Release|Win32
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Debug|x64.ActiveCfg = Debug|x64
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Debug|x64.Build.0 = Debug|x64
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Debug|x86.ActiveCfg = Debug|Win32
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Debug|x86.Build.0 = Debug|Win32
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Release|x64.ActiveCfg = Release|x64
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Release|x64.Build.0 = Release|x64
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Release|x86.ActiveCfg = Release|Win32
+		{914B7D17-2B9D-4314-828B-980BB28BCE97}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,6 +208,7 @@ Global
 		{35BFC329-B146-44E6-9AA7-901F8D2D74EF} = {1DA22510-8967-456A-AAEE-39A89CDD1F5D}
 		{D0F85CF6-0A71-42D4-8E56-853748628370} = {35BFC329-B146-44E6-9AA7-901F8D2D74EF}
 		{524D45E4-08B5-402D-B762-6A11EA424D6C} = {35BFC329-B146-44E6-9AA7-901F8D2D74EF}
+		{914B7D17-2B9D-4314-828B-980BB28BCE97} = {35BFC329-B146-44E6-9AA7-901F8D2D74EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA18A03F-57C8-4391-9A00-F69DB3B43BB7}
