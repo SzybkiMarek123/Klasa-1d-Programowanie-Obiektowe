@@ -1,5 +1,4 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include "BankAccount.h"
 
 BankAccount::BankAccount()

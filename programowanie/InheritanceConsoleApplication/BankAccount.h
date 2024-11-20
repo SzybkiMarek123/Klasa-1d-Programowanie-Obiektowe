@@ -3,7 +3,7 @@
 
 class BankAccount
 {
-	//private oznacza, ¿e te rzeczy s¹ dostêpne tylko w klasie. Pola powinny byæ prywatne.
+	//private oznacza, że te rzeczy są dostępne tylko w klasie. Pola powinny byæ prywatne.
 private:
 	double balance; // stan konta
 	std::string owner; //w³aœciciel
