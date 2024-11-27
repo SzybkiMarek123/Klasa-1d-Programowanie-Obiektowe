@@ -1,9 +1,15 @@
-// InheritanceConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿// InheritanceConsoleApplication.cpp 
 
 #include <iostream>
+#include "SavingBankAccount.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //BankAccount b;
+    //b.AccountInformation();
+
+    SavingBankAccount savingBankAccount;
+    savingBankAccount.AccountInformation();
+
+    SavingBankAccount secondAccount(100, "Ewa Nowak", "z³", 0.1);
 }
