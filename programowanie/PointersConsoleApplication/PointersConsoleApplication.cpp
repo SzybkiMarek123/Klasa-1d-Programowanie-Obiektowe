@@ -15,47 +15,7 @@ int main()
     std::cout << "firstVar = " << firstVar << "\n";
 
     bool thirdVar = true;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
+,0
 
     bool* boolPtr = &thirdVar;
 
