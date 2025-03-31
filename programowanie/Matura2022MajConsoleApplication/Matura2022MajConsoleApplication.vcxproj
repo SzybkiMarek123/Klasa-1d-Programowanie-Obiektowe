@@ -130,8 +130,12 @@
     <ClCompile Include="Matura2022MajConsoleApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Users\Sala213\Desktop\liczby.txt" />
-    <Text Include="..\..\..\..\Users\Sala213\Desktop\przyklad.txt" />
+    <Text Include="ewidencja.txt" />
+    <Text Include="klasa.txt" />
+    <Text Include="liczby.txt" />
+    <Text Include="przyklad.txt" />
+    <Text Include="soki.txt" />
+    <Text Include="uczen.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

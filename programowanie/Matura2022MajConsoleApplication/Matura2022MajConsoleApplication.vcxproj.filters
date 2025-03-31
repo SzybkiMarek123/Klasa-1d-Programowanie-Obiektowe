@@ -20,10 +20,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Users\Sala213\Desktop\przyklad.txt">
+    <Text Include="ewidencja.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\..\..\..\Users\Sala213\Desktop\liczby.txt">
+    <Text Include="klasa.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="liczby.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="przyklad.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="soki.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="uczen.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
