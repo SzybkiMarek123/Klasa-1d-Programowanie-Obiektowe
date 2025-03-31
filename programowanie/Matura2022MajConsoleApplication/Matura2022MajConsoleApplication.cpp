@@ -31,7 +31,7 @@ int reversedNumber(int number)
 
 int main()
 {
-	//Zadanie 1
+	std::cout << "Zadanie 1 " << "\n";
 	setlocale(LC_CTYPE, "Polish");
 	std::ifstream file("przyklad.txt");
 	std::vector<int> numbers;
@@ -50,7 +50,7 @@ int main()
 		}
 	}
 
-	//Zadanie 2
+	std::cout << "Zadanie 2 " << "\n";
 	int maxDifference = 0;
 	int highest = 0;
 	int reversedNum;
@@ -69,7 +69,7 @@ int main()
 
 	std::cout << highest << " " << maxDifference << "\n";
 
-	//Zadanie 3
+	std::cout << "Zadanie 3 " << "\n";
 	for (int num : numbers)
 	{
 		int reversedNum = reversedNumber(num);
@@ -79,7 +79,7 @@ int main()
 		}
 	}
 
-	//Zadanie 4
+	std::cout << "Zadanie 4 " << "\n";
 	std::vector<int> uniqueNumbers;
 	std::vector<int> occurrences;
 
