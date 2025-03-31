@@ -31,17 +31,16 @@ int reversedNumber(int number)
 
 int main()
 {
-	std::cout << "Zadanie 1 " << "\n";
 	setlocale(LC_CTYPE, "Polish");
 	std::ifstream file("przyklad.txt");
 	std::vector<int> numbers;
 	int number;
-
-	while (file >> number)
+while (file >> number)
 	{
 		numbers.push_back(number);
 	}
 
+	std::cout << "Zadanie 1 " << "\n";
 	for (int num : numbers)
 	{
 		if (reversedNumber(num) % 17 == 0)
