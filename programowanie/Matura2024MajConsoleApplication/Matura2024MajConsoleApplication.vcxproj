@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{70bbc5c8-10a1-46d3-ae88-f8e61794042e}</ProjectGuid>
-    <RootNamespace>Matura2022MajConsoleApplication</RootNamespace>
+    <ProjectGuid>{e2844c55-404a-4c5e-9688-69e85b96e2fb}</ProjectGuid>
+    <RootNamespace>Matura2024MajConsoleApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Matura2022CzerwiecConsoleApplication</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,15 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Matura2022CzerwiecConsoleApplication.cpp" />
+    <ClCompile Include="Matura2024MajConsoleApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ewidencja.txt" />
-    <Text Include="klasa.txt" />
+    <Text Include="cennik.txt" />
+    <Text Include="jablka.txt" />
+    <Text Include="kierowcy.txt" />
     <Text Include="liczby.txt" />
-    <Text Include="przyklad.txt" />
-    <Text Include="soki.txt" />
-    <Text Include="uczen.txt" />
+    <Text Include="liczby_przyklad.txt" />
+    <Text Include="rejestr.txt" />
+    <Text Include="skrot.txt" />
+    <Text Include="skrot2.txt" />
+    <Text Include="skrot2_przyklad.txt" />
+    <Text Include="skrot_przyklad.txt" />
+    <Text Include="taryfikator.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

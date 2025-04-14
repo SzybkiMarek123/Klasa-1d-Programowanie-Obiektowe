@@ -2,8 +2,6 @@
 #include <fstream>
 #include <vector>
 
-
-
 bool isPrime(int number)
 {
 	if (number < 2)
@@ -19,8 +17,6 @@ bool isPrime(int number)
 	return true;
 }
 
-
-
 int reversedNumber(int number)
 {
 	int reversed = 0;
@@ -33,23 +29,16 @@ int reversedNumber(int number)
 	return reversed;
 }
 
-
-
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
 	std::ifstream file("przyklad.txt");
 	std::vector<int> numbers;
 	int number;
-while (file >> number)
+	while (file >> number)
 	{
 		numbers.push_back(number);
 	}
-
-
-
-
-
 
 	std::cout << "Zadanie 1 " << "\n";
 	for (int num : numbers)
@@ -59,12 +48,6 @@ while (file >> number)
 			std::cout << reversedNumber(num) << "\n";
 		}
 	}
-
-
-
-
-
-
 
 	std::cout << "Zadanie 2 " << "\n";
 	int maxDifference = 0;
@@ -84,12 +67,6 @@ while (file >> number)
 	}
 	std::cout << highest << " " << maxDifference << "\n";
 
-
-
-
-
-
-
 	std::cout << "Zadanie 3 " << "\n";
 	for (int num : numbers)
 	{
@@ -99,14 +76,6 @@ while (file >> number)
 			std::cout << num << "\n";
 		}
 	}
-
-
-
-
-
-
-
-
 
 	std::cout << "Zadanie 4 " << "\n";
 	std::vector<int> uniqueNumbers;
@@ -126,8 +95,6 @@ while (file >> number)
 			occurrences.push_back(1);
 		}
 	}
-
-
 
 	int uniqueCount = uniqueNumbers.size();
 	int countTwice = 0, countThrice = 0;
