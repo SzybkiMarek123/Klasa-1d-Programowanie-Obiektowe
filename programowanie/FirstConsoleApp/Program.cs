@@ -29,3 +29,4 @@ firstNumber = 99;
 Console.WriteLine($"Przed ParametrTest_v1 {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"Po ParametrTest_v1 {firstNumber}");
+//------------
