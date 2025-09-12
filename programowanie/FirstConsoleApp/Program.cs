@@ -17,7 +17,6 @@ Console.WriteLine($"firstNumber = {firstNumber}");
 Console.WriteLine($"secondNumber= {secondNumber}");
 
 //------------------------------------------------------------------------------------------------------------------------
-
 void ParametrTest_v1(int p)
 {
     Console.WriteLine($"Przed zmianą ParametrTest_v1 {p}");
@@ -25,8 +24,21 @@ void ParametrTest_v1(int p)
     Console.WriteLine($"Po zmianie ParametrTest_v1 {p}");
 }
 
+void ParametrTest_v2(ref int p)
+{
+    Console.WriteLine($"Przed zmianą ParametrTest_v2 {p}");
+    p++;
+    Console.WriteLine($"Po zmianie ParametrTest_v2 {p}");
+}
+
 firstNumber = 99;
 Console.WriteLine($"Przed ParametrTest_v1 {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"Po ParametrTest_v1 {firstNumber}");
-//-------------
+//Parametr_v1(587)
+
+firstNumber = 99;
+Console.WriteLine($"Przed ParametrTest_v2 {firstNumber}");
+ParametrTest_v2(ref firstNumber);
+Console.WriteLine($"Po ParametrTest_v2 {firstNumber}");
+//Parametr_v2(ref 587) //BŁĄD
