@@ -54,3 +54,16 @@ int thirdNumber = 99;
 ParametrTest_v3(out thirdNumber);
 Console.WriteLine($"Po ParametrTest_v3 {thirdNumber}");
 //Parametr_v2(ref 587) //BŁĄD
+
+
+string strNumber = "123";
+int number = int.Parse(strNumber);
+
+if (int.TryParse(strNumber, out int result))
+{
+    Console.WriteLine($"Parsowanie się udało. Wartość: {result}");
+}
+else
+{
+    Console.WriteLine("Parsowanie się nie udało.");
+}
