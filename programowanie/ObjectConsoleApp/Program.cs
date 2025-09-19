@@ -34,7 +34,7 @@ Console.WriteLine($"Pierwszy punkt po wywołaniu ParapetrTestStruct_v1 ({pointSt
 ParapetrTestStruct_v2(ref pointStruct);
 Console.WriteLine($"Pierwszy punkt po wywołaniu ParapetrTestStruct_v2 ({pointStruct.x}, {pointStruct.y}) ");
 
-//-------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 pointClass firstPointClass = new pointClass();
 firstPointClass.x = 5;
