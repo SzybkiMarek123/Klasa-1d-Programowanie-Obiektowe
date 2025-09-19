@@ -1,5 +1,6 @@
 ﻿
 using ObjectConsoleApp;
+using System.Drawing;
 
 PointStruct pointStruct;
 pointStruct.x = 5;
@@ -34,4 +35,26 @@ ParapetrTestStruct_v2(ref pointStruct);
 Console.WriteLine($"Pierwszy punkt po wywołaniu ParapetrTestStruct_v2 ({pointStruct.x}, {pointStruct.y}) ");
 
 //-------------------------------------------------------------------------------------------------------------
- 
+
+pointClass firstPointClass = new pointClass();
+firstPointClass.x = 5;
+firstPointClass.y = 10;
+
+Console.WriteLine($"firstPointClass ma ({firstPointClass.x}, {firstPointClass.y}) ");
+
+pointClass secondPointClass = firstPointClass;
+secondPointClass.x = 20;
+
+Console.WriteLine($"firstPointClass ma ({firstPointClass.x}, {firstPointClass.y}) ");
+Console.WriteLine($"secondPointClass ma ({secondPointClass.x}, {secondPointClass.y}) ");
+
+
+void ParatertTestClass_v1(pointClass pc)
+{
+    Console.WriteLine($"W ParatertTestClass_v1 punkt ma ({pc.x}, {pc.y}) ");
+    pc.x = 99;
+    Console.WriteLine($"W ParatertTestClass_v1 punkt ma ({pc.x}, {pc.y}) ");
+}
+
+ParatertTestClass_v1(firstPointClass);
+Console.WriteLine($"firstPointClass ({firstPointClass.x}, {firstPointClass.y}) ");
