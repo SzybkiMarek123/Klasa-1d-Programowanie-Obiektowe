@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstConsoleApp", "FirstCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectConsoleApp", "ObjectConsoleApp\ObjectConsoleApp.csproj", "{D7EB5F20-EE7F-4EFD-8AE7-A50EC31FAA82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutObjectConsoleApp", "AboutObjectConsoleApp\AboutObjectConsoleApp.csproj", "{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -349,6 +351,18 @@ Global
 		{D7EB5F20-EE7F-4EFD-8AE7-A50EC31FAA82}.Release|x64.Build.0 = Release|Any CPU
 		{D7EB5F20-EE7F-4EFD-8AE7-A50EC31FAA82}.Release|x86.ActiveCfg = Release|Any CPU
 		{D7EB5F20-EE7F-4EFD-8AE7-A50EC31FAA82}.Release|x86.Build.0 = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|x64.Build.0 = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Debug|x86.Build.0 = Debug|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|x64.ActiveCfg = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|x64.Build.0 = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,6 +402,7 @@ Global
 		{E2844C55-404A-4C5E-9688-69E85B96E2FB} = {E2637E5E-6825-4D90-8731-85AFFE0C239F}
 		{DAB23E2D-5274-41F2-B0C4-85B4E30F98A6} = {7FEF9BD0-18C5-42C6-93A1-FCD56984D7A1}
 		{D7EB5F20-EE7F-4EFD-8AE7-A50EC31FAA82} = {7FEF9BD0-18C5-42C6-93A1-FCD56984D7A1}
+		{A3DE4DDC-148D-4C82-8EE3-0DCE06EEC565} = {7FEF9BD0-18C5-42C6-93A1-FCD56984D7A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA18A03F-57C8-4391-9A00-F69DB3B43BB7}
