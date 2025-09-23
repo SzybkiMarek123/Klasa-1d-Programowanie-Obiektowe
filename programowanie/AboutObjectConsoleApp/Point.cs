@@ -1,35 +1,63 @@
-﻿namespace AboutObjectConsoleApp
+﻿namespace AboutObjectConsoleApp;
+
+internal class Point /*: Object*/
 {
-    internal class Point
+    protected int x;
+    public int X
     {
-        private int x;
-        private int y;
-
-        public Point()
+        set
         {
-            x = 15;
-            y = 68;
+            //if (value > 0)
+            x = value;
         }
-
-        public Point(int a, int b)
-        {
-            x = a;
-            y = b;
-        }
-
-
-        public void SetX(int x)
-        {
-            this.x = x;
-        }
-
-        public int GetX() 
+        get
         {
             return x;
         }
-        public void Show()
+    }
+
+    /*
+    private int y;
+    public int Y
+    {
+        set
         {
-            Console.WriteLine($"({x},{y})");
+            y = value;
         }
+        get
+        {
+            return y;
+        }
+    }
+    */
+    public int Y { get; set; }
+
+
+    public Point()
+    {
+        x = 15;
+        Y = 68;
+    }
+
+    public Point(int a, int b)
+    {
+        x = a;
+        Y = b;
+    }
+
+    public void SetX(int x)
+    {
+        //if (x > 0)
+        this.x = x;
+    }
+
+    public int GetX()
+    {
+        return x;
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"({x},{Y})");
     }
 }
