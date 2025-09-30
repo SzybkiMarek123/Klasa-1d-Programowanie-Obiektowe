@@ -91,4 +91,4 @@ void ErrorsV3()
     else
         Console.WriteLine("Nie można dzielić przez zero");
 }
-//---
+//------------
