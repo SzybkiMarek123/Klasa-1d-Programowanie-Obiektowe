@@ -4,15 +4,15 @@ namespace PracticalTasksConsoleApp.Czerwiec2023_6
     /**************
     nazwa klasy: Film
     pola:
-    *tytul - pole chronione przechowujące tytuł filmu, string
-    *liczbaWypozyczen - pole chronione przechowujące liczbę wypożyczeń filmu, int
+    -tytul- przechowujące tytuł filmu.
+    -liczbaWypozyczen- przechowujące liczbę wypożyczeń filmu.
     
     metody: 
-    *UstawTytul - ustawia tytuł filmu, jeśli długość tytułu nie przekracza 20 znaków, w przeciwnym razie wypisuje komunikat o błędzie.
-    *PobierzTytul - metoda zwraca tytuł filmu, string
-    *PobierzLiczbeWypozycen - metoda zwraca liczbę wypożyczeń filmu, int
-    *InkrementacjaWypozyczenia - metoda nic nie zwraca (void), inkrementuje liczbę wypożyczeń filmu o 1.\
-    informacje: Klasa reprezentuje filmy,
+    -UstawTytul - ustawia tytuł filmu, jeśli długość tytułu nie przekracza 20 znaków, w przeciwnym razie wypisuje komunikat o błędzie.
+    -Tytul -  zwraca tytuł filmu, tytul.
+    -LiczbaWypozycen - zwraca liczbę wypożyczeń filmu, liczba wypożyczeń.
+    -InkrementacjaWypozyczenia - nic nie zwraca, inkrementuje liczbę wypożyczeń filmu o 1.
+    informacje: Klasa filmy.
     autor: Mateusz Papucki
     **************/
 
