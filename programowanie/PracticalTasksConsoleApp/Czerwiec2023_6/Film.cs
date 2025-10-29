@@ -45,7 +45,7 @@ namespace PracticalTasksConsoleApp.Czerwiec2023_6
             return tytul;
         }
 
-        public int LiczbeaWypozyczen()
+        public int LiczbaWypozyczen()
         {
             return liczbaWypozyczen;
         }
