@@ -2,13 +2,13 @@
 {
     internal class task1
     {
-        /**********************************************
+        /**************
         nazwa funkcji: AlgorytmEuklidesa(NWD)
         opis funkcji: Oblicza największy wspólny dzielnik (NWD) dwóch liczb całkowitych dodatnich metodą Euklidesa.
         parametry: a - pierwsza liczba całkowita dodatnia (int), b - druga liczba całkowita dodatnia (int)
         zwracany typ i opis: int - największy wspólny dzielnik (NWD) dwóch liczb całkowitych dodatnich
         autor: Mateusz Papucki
-        ***********************************************/
+        **************/
         public int NWD(int a, int b)
         {
             while (a != b)
