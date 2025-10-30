@@ -26,7 +26,7 @@
             return a;
         }
 
-        public void task11()
+        public void Task()
         {
             Console.Write("Podaj pierwszą liczbę a: ");
             int a = int.Parse(Console.ReadLine());

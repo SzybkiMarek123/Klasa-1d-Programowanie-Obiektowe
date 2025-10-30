@@ -1,6 +1,6 @@
 ﻿namespace PracticalTasksConsoleApp.Czerwiec2023_6
 {
-    internal class Task2
+    internal class task3
     {
         public void Task()
         {
