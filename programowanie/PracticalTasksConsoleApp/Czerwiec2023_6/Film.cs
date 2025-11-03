@@ -1,12 +1,10 @@
-﻿
-namespace PracticalTasksConsoleApp.Czerwiec2023_6
+﻿namespace PracticalTasksConsoleApp.Czerwiec2023_6
 {
     /**************
     nazwa klasy: Film
     pola:
     -tytul- przechowujące tytuł filmu.
     -liczbaWypozyczen- przechowujące liczbę wypożyczeń filmu.
-    
     metody: 
     -UstawTytul - ustawia tytuł filmu, jeśli długość tytułu nie przekracza 20 znaków, w przeciwnym razie wypisuje komunikat o błędzie.
     -Tytul -  zwraca tytuł filmu, tytul.

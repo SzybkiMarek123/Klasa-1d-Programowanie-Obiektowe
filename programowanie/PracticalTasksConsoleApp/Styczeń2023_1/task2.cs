@@ -1,20 +1,17 @@
-﻿
-namespace PracticalTaskConsoleApp.Styczeń2023_1
+﻿namespace PracticalTasksConsoleApp.Styczeń2023_1
 {
     internal class Task2
     {
         public void Task()
         {
-            Notatka notatkaPierwsza = new Notatka("Zakupy", "Kupić mleko, chleb i jajka.");
-            Notatka notatkaDruga = new Notatka("Praca", "Zakończyć raport do piątku.");
+            Notatka notatka1 = new Notatka("Zoo", "Iść w sobote do zoo.");
+            Notatka notatka2 = new Notatka("Komputer", "Jutro zgrać pliki");
 
             Console.WriteLine("Pierwsza notatka:");
-            notatkaPierwsza.WyswietlNotatke();
-            notatkaPierwsza.Diagnostyczna();
+            notatka1.Wyswietl();
 
             Console.WriteLine("\nDruga notatka:");
-            notatkaDruga.WyswietlNotatke();
-            notatkaDruga.Diagnostyczna();
+            notatka2.Wyswietl();
         }
     }
 }
