@@ -9,7 +9,7 @@
     -UstawTytul - ustawia tytuł filmu, jeśli długość tytułu nie przekracza 20 znaków, w przeciwnym razie wypisuje komunikat o błędzie.
     -Tytul -  zwraca tytuł filmu, tytul.
     -LiczbaWypozycen - zwraca liczbę wypożyczeń filmu, liczba wypożyczeń.
-    -InkrementacjaWypozyczenia - nic nie zwraca, inkrementuje liczbę wypożyczeń filmu o 1.
+    -InkrementacjaWypozyczenia -inkrementuje liczbę wypożyczeń filmu o 1.
     informacje: Klasa filmy.
     autor: Mateusz Papucki
     **************/
@@ -33,7 +33,7 @@
             }
             else
             {
-                Console.WriteLine("Tytul nie mozę miec wiecej jak 20 znaków");
+                Console.WriteLine("Tytul nie moze miec wiecej jak 20 znaków");
                 
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace PracticalTasksConsoleApp.Styczeń2025_1
 {
-    internal class Pralka1 : Urzadzenie
+    internal class Pralka : Urzadzenie
     {
         private int numerProgramu = 0;
 
@@ -14,7 +14,7 @@
             else
             {
                 numerProgramu = 0;
-                Informacje("Podano niepoprawny numer programu");
+                Informacje("Podaj poprawny numer programu");
             }
             return numerProgramu;
         }

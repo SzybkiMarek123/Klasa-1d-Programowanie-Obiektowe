@@ -1,6 +1,6 @@
 ﻿namespace PracticalTasksConsoleApp.Styczeń2025_1
 {
-    internal class Odkurzacz1 : Urzadzenie
+    internal class Odkurzacz : Urzadzenie
     {
         private bool wlaczony = false;
 
@@ -9,7 +9,7 @@
             if (!wlaczony)
             {
                 wlaczony = true;
-                Informacje("Odkurzacz włączono");
+                Informacje("Odkurzacz włączony");
             }
         }
 
@@ -18,7 +18,7 @@
             if (wlaczony)
             {
                 wlaczony = false;
-                Informacje("Odkurzacz wyłączono");
+                Informacje("Odkurzacz wyłączony");
             }
         }
     }

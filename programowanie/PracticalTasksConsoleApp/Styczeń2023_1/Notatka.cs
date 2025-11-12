@@ -3,11 +3,11 @@
     /**********************************************
     klasa: Notatka
     pola: 
-    -id- unikalny identyfikator notatki
+    -id- identyfikator notatki
     -tytul- tytuł notatki
     -tresc- treść notatki
-    -licznikNotatek- licznik utworzonych notatek
-    informacje: Klasa notatka reprezentuje system do tworzenia notatek
+    -licznikNotatek- licznik notatek
+    informacje: Klasa notatka reprezentuje system do tworzenia notatek.
     autor: Mateusz Papucki
     ***********************************************/
 

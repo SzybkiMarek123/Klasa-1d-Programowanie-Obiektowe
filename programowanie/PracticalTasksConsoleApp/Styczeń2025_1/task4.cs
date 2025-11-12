@@ -4,8 +4,8 @@
     {
         public void Task()
         {
-            Pralka1 pralka = new Pralka1();
-            Odkurzacz1 odkurzacz = new Odkurzacz1();
+            Pralka pralka = new Pralka();
+            Odkurzacz odkurzacz = new Odkurzacz();
 
             Console.WriteLine("Podaj numer prania");
             int numerProgramu = int.Parse(Console.ReadLine());
