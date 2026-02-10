@@ -127,5 +127,12 @@ internal class Task1
         //Zadanie 10
         var q10 = people.Any(p => p.City == "Gdańsk");
         Console.WriteLine($"Zadanie 9 osoba z Gdańska {q10}");
+
+
+        // === POZIOM 2 ===
+
+        //Zadanie 11
+        var q11 = people.Any(p => p.City == "Gdańsk");
+        Console.WriteLine($"Zadanie 9 osoba z Gdańska {q10}");
     }
 }
