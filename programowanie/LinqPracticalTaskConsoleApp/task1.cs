@@ -105,7 +105,27 @@ internal class Task1
         Print("Zadanie 4", q4);
 
         //Zadanie 5
-        var q5 = people.OrderBy(p => p.LastName);
+        var q5 = people.Select(p => new { FirstName = p.FirstName, lastname = p.LastName });
         Print("Zadanie 5", q5);
+
+        //Zadanie 6
+        var q6 = people.Select(p => p.City).Distinct();
+        Print("Zadanie 6", q6);
+
+        //Zadanie 7
+        var q7 = people.Count(p => p.City == "Warszawa");
+        Console.WriteLine($"Zadanie 7 liczba osób {q7}");
+
+        //Zadanie 8
+        var q8 = people.Average(p => p.Salary);
+        Console.WriteLine($"Zadanie 8 średnia pensja {q8}");
+
+        //Zadanie 9
+        var q9 = people.OrderBy(p => p.Age).First();
+        Console.WriteLine($"Zadanie 9 najmłodsza {q9}");
+
+        //Zadanie 10
+        var q10 = people.Any(p => p.City == "Gdańsk");
+        Console.WriteLine($"Zadanie 9 osoba z Gdańska {q10}");
     }
 }
