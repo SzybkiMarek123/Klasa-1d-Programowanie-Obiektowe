@@ -78,18 +78,18 @@ internal class Task1
         {
             new Person() { Id=1, FirstName="Anna",  LastName="Nowak",    Age=29, Gender=Gender.Female, City="Kielce", Salary=8200m,  Skills=["C#", "LINQ", "SQL"] },
             new() { Id=2, FirstName="Marek", LastName="Kowalski", Age=43, Gender=Gender.Male,   City="Warszawa", Salary=15000m, Skills=["Azure", "C#", "DevOps"] },
-            new() { Id=3, FirstName="Ewa",   LastName="Wi�niewska",Age=35, Gender=Gender.Female, City="Krak�w", Salary=9800m,  Skills=["JavaScript", "React"] },
-            new() { Id=4, FirstName="Jan",   LastName="Zieli�ski", Age=43, Gender=Gender.Male,   City="Gda�sk", Salary=12000m, Skills=["C#", "SQL"] },
+            new() { Id=3, FirstName="Ewa",   LastName="Wiśniewska",Age=35, Gender=Gender.Female, City="Kraków", Salary=9800m,  Skills=["JavaScript", "React"] },
+            new() { Id=4, FirstName="Jan",   LastName="Zieliński", Age=43, Gender=Gender.Male,   City="Gdańsk", Salary=12000m, Skills=["C#", "SQL"] },
             new() { Id=5, FirstName="Ola",   LastName="Maj",       Age=26, Gender=Gender.Female, City="Kielce", Salary=7200m,  Skills=["Python", "ML"] },
             new() { Id=6, FirstName="Piotr", LastName="Lewandowski",Age=37,Gender=Gender.Male,   City="Warszawa", Salary=13400m, Skills=["C#", "LINQ", "Azure"] },
-            new() { Id=7, FirstName="Iga",   LastName="Kowal",     Age=31, Gender=Gender.Female, City="Krak�w", Salary=9900m,  Skills=["Go", "Kubernetes"] },
+            new() { Id=7, FirstName="Iga",   LastName="Kowal",     Age=31, Gender=Gender.Female, City="Kraków", Salary=9900m,  Skills=["Go", "Kubernetes"] },
             new() { Id=8, FirstName="Tomek", LastName="Sikora",    Age=29, Gender=Gender.Male,   City="Kielce", Salary=8800m,  Skills=["C#", "MAUI", "Bluetooth"] },
         };
 
         // === POZIOM 1 ===
 
         // Zadanie 1
-        var q1 = people.Where(p => p.City == "Krak�w");
+        var q1 = people.Where(p => p.City == "Kraków");
         Print("Zadanie 1", q1);
 
         //Zadanie 2
@@ -114,25 +114,38 @@ internal class Task1
 
         //Zadanie 7
         var q7 = people.Count(p => p.City == "Warszawa");
-        Console.WriteLine($"Zadanie 7 liczba osób {q7}");
+        Print("Zadanie 7", new[] { q7 });
 
         //Zadanie 8
         var q8 = people.Average(p => p.Salary);
-        Console.WriteLine($"Zadanie 8 średnia pensja {q8}");
+        Print("Zadanie 8", new[] { q8 });
 
         //Zadanie 9
         var q9 = people.OrderBy(p => p.Age).First();
-        Console.WriteLine($"Zadanie 9 najmłodsza {q9}");
+        Print("Zadanie 9", new[] { q9 });
 
         //Zadanie 10
         var q10 = people.Any(p => p.City == "Gdańsk");
-        Console.WriteLine($"Zadanie 9 osoba z Gdańska {q10}");
-
-
-        // === POZIOM 2 ===
+        Print("Zadanie 10", new[] { q10 });
 
         //Zadanie 11
-        var q11 = people.Any(p => p.City == "Gdańsk");
-        Console.WriteLine($"Zadanie 9 osoba z Gdańska {q10}");
+        var q11 = people.OrderBy(p => p.City).ThenByDescending(p => p.Salary);
+        Print("Zadanie 11", q11);
+
+        //Zadanie 12
+        var q12 = people.Where(p => p.Age >= 25 && p.Age <= 35);
+        Print("Zadanie 12", q12);
+
+        //Zadanie 13
+        var q13 = people.Where(p => p.City == "Kielce").Sum(p => p.Salary);
+        Print("Zadanie 13", new[] { q13 });
+
+        //Zadanie 14
+        var q14 = people.FirstOrDefault(p => p.Salary > 10000);
+        Print("Zadanie 14", new[] { q14 });
+
+        //Zadanie 15
+        var q15 = people.OrderBy(p => p.LastName).LastOrDefault();
+        Print("Zadanie 14", new[] { q15 });
     }
 }
