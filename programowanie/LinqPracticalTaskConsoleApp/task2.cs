@@ -78,5 +78,34 @@ internal class Task2
             new() { Id = 15, Customer="Kasia", Product="Drukarka",  Quantity=1, PricePerItem=700m,  OrderDate=DateTime.Today.AddDays(-1),  Status=OrderStatus.New },
             new() { Id = 16, Customer="Kasia", Product="Laptop",    Quantity=1, PricePerItem=4300m, OrderDate=DateTime.Today.AddDays(-28), Status=OrderStatus.Delivered }
         };
+
+        // Zadanie 1
+        var q1 = orders.Where(o => o.Status == OrderStatus.New);
+        Print("Zadanie 2.1", q1);
+
+        // Zadanie 2
+        var q2 = orders.Any(o => o.Product == "Laptop");
+        Print("Zadanie 2.2", new[] { q2 });
+
+        // Zadanie 3
+        var q3 = orders.Where(o => o.OrderDate >= DateTime.Today.AddDays(-30));
+        Print("Zadanie 2.3", q3);
+
+        // Zadanie 4
+        var q4 = orders.Select(o => $"Klient:{o.Customer} Wartość zamówienia:  {o.Total}").ToList();
+        Print("Zadanie 2.4", q4);
+
+        // Zadanie 5
+        var q5 = orders.Where(o => o.Product.Contains('o'));
+        Print("Zadanie 2.5", q5);
+
+        // Zadanie 6
+        var q6 = orders.Where(o => o.Total > 1000 && o.Status != OrderStatus.Cancelled);
+        Print("Zadanie 2.6", q6);
+
+        // Zadanie 7
+        var q7 = orders.All(o => o.OrderDate.Year == DateTime.Today.Year);
+        Print("Zadanie 2.7", new[] { q7 });
+
     }
 }

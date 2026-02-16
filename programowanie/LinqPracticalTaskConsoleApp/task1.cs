@@ -86,7 +86,7 @@ internal class Task1
             new() { Id=8, FirstName="Tomek", LastName="Sikora",    Age=29, Gender=Gender.Male,   City="Kielce", Salary=8800m,  Skills=["C#", "MAUI", "Bluetooth"] },
         };
 
-        // === POZIOM 1 ===
+
 
         // Zadanie 1
         var q1 = people.Where(p => p.City == "Kraków");
@@ -105,7 +105,7 @@ internal class Task1
         Print("Zadanie 4", q4);
 
         //Zadanie 5
-        var q5 = people.Select(p => new { FirstName = p.FirstName, lastname = p.LastName });
+        var q5 = people.Select(p => $"{p.FirstName} {p.LastName}");
         Print("Zadanie 5", q5);
 
         //Zadanie 6
@@ -147,5 +147,28 @@ internal class Task1
         //Zadanie 15
         var q15 = people.OrderBy(p => p.LastName).LastOrDefault();
         Print("Zadanie 14", new[] { q15 });
+
+        //Zadanie 16
+        var q16 = people.Select(p => $"{p.FirstName} {p.LastName} ({p.City})");
+        Print("Zadanie 16", q16);
+
+        //Zadanie 17
+        var q17 = people.All(p => p.Age > 18);
+        Print("Zadanie 17", new[] { q17 });
+
+        //Zadanie 18
+        var q18 = people.Count(p => p.Gender == Gender.Female);
+        Print("Zadanie 18", new[] { q18 });
+
+        //Zadanie 19
+        var averageS = people.Average(p => p.Salary);
+        var q19 = people.Where(p => p.Salary > averageS);
+        Print("Zadanie 19", q19);
+
+        //Zadanie 20
+        var max = people.Max(p => p.Age);
+        var q20 = people.Where(p => p.Age == max && p.City == "Kraków");
+        Print("Zadanie 20", q20);
+
     }
 }
