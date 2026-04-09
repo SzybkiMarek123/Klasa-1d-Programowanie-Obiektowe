@@ -170,5 +170,39 @@ internal class Task1
         var q20 = people.Where(p => p.Age == max && p.City == "Kraków");
         Print("Zadanie 20", q20);
 
+        //Zadanie 21
+        var q21 = people.Where(p => p.Skills.Contains("C#"));
+        Print("Zadanie 21", q21);
+
+        //Zadanie 22
+        var q22 = people.Where(p => p.Skills.Count() > 3);
+        Print("Zadanie 22", q22);
+
+        //Zadanie 23
+        var q23 = people.Where(p => p.City == "Warszawa").Select(p => new{p.FirstName, p.LastName,p.Age, p.Salary}).OrderByDescending(p => p.Age);
+        Print("Zadanie 23", q23);
+
+        //Zadanie 24
+        var q24 = people.Where(p => p.Skills.Contains("Azure"));
+        Print("Zadanie 24", q24);
+
+        //Zadanie 25
+        var q25 = people.All(p => p.Salary > 4000);
+        Print("Zadanie 18", new[] { q25 });
+
+        //Zadanie 26
+        var max2 = people.Max(p => p.Salary);
+        var q26 = people.Where(p => p.Salary == max2);
+        Print("Zadanie 26", q26);
+
+        //Zadanie 27
+        var min1 = people.Min(p => p.Salary);
+        var q27 = people.Where(p => p.Salary == min1);
+        Print("Zadanie 27", q27);
+
+        //Zadanie 28
+        var max3 = people.Max(p => p.Age);
+        var q28 = people.Where(p => p.Age == max3);
+        Print("Zadanie 28", q28);
     }
 }

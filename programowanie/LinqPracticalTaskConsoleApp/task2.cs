@@ -83,7 +83,7 @@ internal class Task2
         var q1 = orders.Where(o => o.Status == OrderStatus.New);
         Print("Zadanie 2.1", q1);
 
-        // Zadanie 2
+        //Zadanie 2
         var q2 = orders.Any(o => o.Product == "Laptop");
         Print("Zadanie 2.2", new[] { q2 });
 
@@ -106,6 +106,34 @@ internal class Task2
         // Zadanie 7
         var q7 = orders.All(o => o.OrderDate.Year == DateTime.Today.Year);
         Print("Zadanie 2.7", new[] { q7 });
+
+        // Zadanie 8
+        var q8 = orders.GroupBy(o => o.Customer).Where(g => g.Select(o => o.Product).Distinct().Count() > 1).SelectMany(g => g);
+        Print("Zadanie 2.8", q8);
+
+        // Zadanie 9
+        var q9 = orders.GroupBy(o => o.Customer).Select(g => new{Customer = g.Key,DaysSinceFirstOrder = (DateTime.Today - g.Min(o => o.OrderDate)).Days});
+        Print("Zadanie 2.9", q9);
+
+        // Zadanie 10
+        var q10 = orders.Select(o => (o.Customer, o.Product)).Distinct();
+        Print("Zadanie 2.10", q10);
+
+        // Zadanie 11
+        var q11 = orders.GroupBy(o => o.Customer).Where(g => g.Any(o => o.Status == OrderStatus.Cancelled) && g.Any(o => o.Status == OrderStatus.Delivered)).Select(g => g.Key);
+        Print("Zadanie 2.11", q11);
+
+        // Zadanie 12
+        var q12 = orders.Where(o => o.Total >= 1000 && o.Total <= 3000 && o.OrderDate >= DateTime.Now.AddDays(-14));
+        Print("Zadanie 2.12", q12);
+
+        // Zadanie 13
+        var q13 = orders.GroupBy(o => new { o.Customer, o.Product }).Where(g => g.Select(o => o.OrderDate).Distinct().Count() > 1).Select(g => g.Key.Customer);
+        Print("Zadanie 2.13", q13);
+
+        // Zadanie 14
+        var q14 = orders.Where(o => orders.Any(o2 => o2.Id != o.Id && o.PricePerItem > o2.Total));
+        Print("Zadanie 2.14", q14);
 
     }
 }
