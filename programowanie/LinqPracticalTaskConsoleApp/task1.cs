@@ -179,7 +179,7 @@ internal class Task1
         Print("Zadanie 22", q22);
 
         //Zadanie 23
-        var q23 = people.Where(p => p.City == "Warszawa").Select(p => new{p.FirstName, p.LastName,p.Age, p.Salary}).OrderByDescending(p => p.Age);
+        var q23 = people.Where(p => p.City =="Warszawa").Select(p =>new{p.FirstName, p.LastName,p.Age, p.Salary}).OrderByDescending(p => p.Age);
         Print("Zadanie 23", q23);
 
         //Zadanie 24
@@ -191,17 +191,17 @@ internal class Task1
         Print("Zadanie 18", new[] { q25 });
 
         //Zadanie 26
-        var max2 = people.Max(p => p.Salary);
+        var max2 = people.Max(p =>p.Salary);
         var q26 = people.Where(p => p.Salary == max2);
         Print("Zadanie 26", q26);
 
         //Zadanie 27
         var min1 = people.Min(p => p.Salary);
-        var q27 = people.Where(p => p.Salary == min1);
+        var q27 = people.Where(p=> p.Salary == min1);
         Print("Zadanie 27", q27);
 
         //Zadanie 28
-        var max3 = people.Max(p => p.Age);
+        var max3 = people.Max(p =>p.Age);
         var q28 = people.Where(p => p.Age == max3);
         Print("Zadanie 28", q28);
     }
