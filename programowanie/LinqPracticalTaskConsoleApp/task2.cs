@@ -31,7 +31,7 @@ POZIOM 3 � ZAAWANSOWANY
 11. Znajd� klient�w, kt�rzy maj� co najmniej jedno zam�wienie w statusie �Cancelled� ORAZ co najmniej jedno w statusie �Delivered�.
 12. Wypisz zam�wienia, kt�rych warto�� mie�ci si� pomi�dzy 1000 a 3000 z� i zosta�y z�o�one w ci�gu ostatnich 14 dni.
 13. Znajd� klient�w, kt�rzy zamawiali ten sam produkt w r�nych terminach.
-14. Znajd� zam�wienia, w kt�rych cena jednostkowa produktu jest wy�sza ni� ��czna warto�� jakiegokolwiek innego zam�wienia.
+14. Znajd� zam�wienia, w kt�rych cena jednostkowa produktu jest wy�sza ni� ��czna warto�� jakiegokolwiek innego zam�wienia.dasdasdxZxZxxzxzxzXZxzzxzxczxc
 */
 
 
