@@ -1,4 +1,4 @@
-﻿namespace FirstMauiApp
+﻿namespace SimpleBindingCalculatorMauiApp
 {
     public partial class MainPage : ContentPage
     {

@@ -1,7 +1,6 @@
-﻿           using EventvsBindingMauiApp;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
-namespace EventVsBindingMauiApp
+namespace SimpleBindingCalculatorMauiApp
 {
     public static class MauiProgram
     {
@@ -17,7 +16,7 @@ namespace EventVsBindingMauiApp
                 });
 
 #if DEBUG
-            builder.Logging.AddDebug();
+    		builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

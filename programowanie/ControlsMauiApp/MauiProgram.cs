@@ -1,7 +1,6 @@
-﻿           using EventvsBindingMauiApp;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
-namespace EventVsBindingMauiApp
+namespace ControlsMauiApp
 {
     public static class MauiProgram
     {
