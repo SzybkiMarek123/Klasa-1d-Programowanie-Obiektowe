@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelBookingMauiApp.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Imie:" />
+            <Entry/>
+            <Label Text="Nazwisko:" />
+            <Entry/>
+            <Label Text="Email:" />
+            <Entry/>
+            <Label Text="Data przyjazdu:" />
+            <DatePicker/>
+            <Label Text="Liczba nocy:" />
+            <Stepper/>
+            <Entry IsReadOnly="True"></Entry>
+            <Label Text="Liczba nocy:" />
+            <Stepper/>
+            <Entry IsReadOnly="True"></Entry>
+            <Picker Title="Rodzaj pokoju:" x:Name="roomPicker">
+                <Picker.Items>
+                    <x:String>Pokój jednoosobowy – 200 zł / noc</x:String>
+                    <x:String>Pokój dwuosobowy – 300 zł / noc</x:String>
+                    <x:String>Apartament – 500 zł / noc</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Śniadanie:"/>
+            <Switch></Switch>
+            <Label Text="Miejsce parkingowe:"/>
+            <CheckBox></CheckBox>
+            <Button Text="Oblicz koszt"></Button>
+            <Label Text="Koszt:"></Label>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
