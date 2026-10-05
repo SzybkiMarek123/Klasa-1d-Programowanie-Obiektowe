@@ -48,230 +48,230 @@ namespace HotelBookingMauiApp
 {
     public partial class MainPage : ContentPage
     {
-        public ObservableCollection<Room> RoomType { get; set; }
+        public ObservableCollection<Pokoj> ListaPokoi { get; set; }
 
-        private Room selectedRoom;
+        private Pokoj pokojWybrany;
 
-        public Room SelectedRoom
+        public Pokoj PokojWybrany
         {
-            get { return selectedRoom; }
+            get { return pokojWybrany; }
             set
             {
-                selectedRoom = value;
+                pokojWybrany = value;
 
-                if (selectedRoom.Name.Contains("jednoosobowy"))
+                if (pokojWybrany.Nazwa.Contains("jednoosobowy"))
                 {
-                    MaxGuests = 1;
+                    MaksymalnaLiczbaGosci = 1;
                 }
-                else if (selectedRoom.Name.Contains("dwuosobowy"))
+                else if (pokojWybrany.Nazwa.Contains("dwuosobowy"))
                 {
-                    MaxGuests = 2;
+                    MaksymalnaLiczbaGosci = 2;
                 }
-                else if (selectedRoom.Name.Contains("Apartament"))
+                else if (pokojWybrany.Nazwa.Contains("Apartament"))
                 {
-                    MaxGuests = 4;
-                }
-
-                if (GuestsCount > MaxGuests)
-                {
-                    GuestsCount = MaxGuests;
+                    MaksymalnaLiczbaGosci = 4;
                 }
 
-
-                OnPropertyChanged();
-            }
-        }
-
-        private int maxGuests;
-
-        public int MaxGuests
-        {
-            get { return maxGuests; }
-            set
-            {
-                maxGuests = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private DateTime minimumDate;
-
-        public DateTime MinimumDate
-        {
-            get { return minimumDate; }
-            set
-            {
-                minimumDate = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private int nightCount;
-
-        public int NightCount
-        {
-            get { return nightCount; }
-            set
-            {
-                nightCount = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private int guestsCount;
-
-        public int GuestsCount
-        {
-            get { return guestsCount; }
-            set
-            {
-                guestsCount = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool isBreakfast;
-
-        public bool IsBreakfast
-        {
-            get { return isBreakfast; }
-            set
-            {
-                isBreakfast = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool isParking;
-
-        public bool IsParking
-        {
-            get { return isParking; }
-            set
-            {
-                isParking = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string FullName { get; set; }
-        public string EmailAdress { get; set; }
-
-        private DateTime arrivalDate;
-
-        public DateTime ArrivalDate
-        {
-            get { return arrivalDate; }
-            set
-            {
-                arrivalDate = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string summaryText;
-
-        public string SummaryText
-        {
-            get { return summaryText; }
-            set
-            {
-                summaryText = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public void CreateSummary()
-        {
-            if (!string.IsNullOrWhiteSpace(FullName) &&
-                !string.IsNullOrWhiteSpace(EmailAdress) &&
-                SelectedRoom is not null)
-            {
-                double roomCost = NightCount * SelectedRoom.Price;
-
-                double breakfastCost = 0;
-
-                if (IsBreakfast)
+                if (LiczbaGosci > MaksymalnaLiczbaGosci)
                 {
-                    breakfastCost = NightCount * GuestsCount * 40;
+                    LiczbaGosci = MaksymalnaLiczbaGosci;
                 }
 
-                double parkingCost = 0;
 
-                if (IsParking)
+                OnPropertyChanged();
+            }
+        }
+
+        private int maksymalnaLiczbaGosci;
+
+        public int MaksymalnaLiczbaGosci
+        {
+            get { return maksymalnaLiczbaGosci; }
+            set
+            {
+                maksymalnaLiczbaGosci = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private DateTime minimalnaData;
+
+        public DateTime MinimalnaData
+        {
+            get { return minimalnaData; }
+            set
+            {
+                minimalnaData = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int liczbaNocy;
+
+        public int LiczbaNocy
+        {
+            get { return liczbaNocy; }
+            set
+            {
+                liczbaNocy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int liczbaGosci;
+
+        public int LiczbaGosci
+        {
+            get { return liczbaGosci; }
+            set
+            {
+                liczbaGosci = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool sniadanie;
+
+        public bool Sniadanie
+        {
+            get { return sniadanie; }
+            set
+            {
+                sniadanie = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool parking;
+
+        public bool CzyParking
+        {
+            get { return parking; }
+            set
+            {
+                parking = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ImieINazwisko { get; set; }
+        public string AdresEmail { get; set; }
+
+        private DateTime dataPrzyjazdu;
+
+        public DateTime DataPrzyjazdu
+        {
+            get { return dataPrzyjazdu; }
+            set
+            {
+                dataPrzyjazdu = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string tekstPodsumowania;
+
+        public string TekstPodsumowania
+        {
+            get { return tekstPodsumowania; }
+            set
+            {
+                tekstPodsumowania = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public void UtworzPodsumowanie()
+        {
+            if (!string.IsNullOrWhiteSpace(ImieINazwisko) &&
+                !string.IsNullOrWhiteSpace(AdresEmail) &&
+                PokojWybrany is not null)
+            {
+                double kosztPokoju = LiczbaNocy * PokojWybrany.Cena;
+
+                double kosztSniadania = 0;
+
+                if (Sniadanie)
                 {
-                    parkingCost = NightCount * 30;
+                    kosztSniadania = LiczbaNocy * LiczbaGosci * 40;
                 }
 
-                double totalCost = roomCost + breakfastCost + parkingCost;
+                double kosztParkingu = 0;
 
-                string breakfast = IsBreakfast ? "Tak" : "Nie";
-                string parking = IsParking ? "Tak" : "Nie";
+                if (CzyParking)
+                {
+                    kosztParkingu = LiczbaNocy * 30;
+                }
 
-                SummaryText =
-                    $"Imię i nazwisko: {FullName}\n" +
-                    $"Data przyjazdu: {ArrivalDate:dd.MM.yyyy}\n" +
-                    $"Liczba nocy: {NightCount}\n" +
-                    $"Liczba osób: {GuestsCount}\n" +
-                    $"Pokój: {SelectedRoom.Name}\n" +
-                    $"Śniadanie: {breakfast}\n" +
-                    $"Parking: {parking}\n" +
-                    $"Koszt pokoju: {NightCount} x {SelectedRoom.Price} zł = {roomCost} zł\n" +
-                    $"Koszt śniadania: {NightCount} x {GuestsCount} x 40 zł = {breakfastCost} zł\n" +
-                    $"Koszt parkingu: {NightCount} x 30 zł = {parkingCost} zł\n" +
-                    $"Łączny koszt: {totalCost} zł";
+                double kosztCalkowity = kosztPokoju + kosztSniadania + kosztParkingu;
+
+                string statusSniadania = Sniadanie ? "Tak" : "Nie";
+                string statusParkingu = CzyParking ? "Tak" : "Nie";
+
+                TekstPodsumowania =
+                    $"Imię i nazwisko: {ImieINazwisko}\n" +
+                    $"Data przyjazdu: {DataPrzyjazdu:dd.MM.yyyy}\n" +
+                    $"Liczba nocy: {LiczbaNocy}\n" +
+                    $"Liczba osób: {LiczbaGosci}\n" +
+                    $"Pokój: {PokojWybrany.Nazwa}\n" +
+                    $"Śniadanie: {statusSniadania}\n" +
+                    $"Parking: {statusParkingu}\n" +
+                    $"Koszt pokoju: {LiczbaNocy} x {PokojWybrany.Cena} zł = {kosztPokoju} zł\n" +
+                    $"Koszt śniadania: {LiczbaNocy} x {LiczbaGosci} x 40 zł = {kosztSniadania} zł\n" +
+                    $"Koszt parkingu: {LiczbaNocy} x 30 zł = {kosztParkingu} zł\n" +
+                    $"Łączny koszt: {kosztCalkowity} zł";
             }
             else
             {
-                SummaryText = "Wprowadź poprawne dane.";
+                TekstPodsumowania = "Wprowadź poprawne dane.";
             }
         }
 
-        private Command summary;
+        private Command poleceniePodsumowania;
 
-        public Command Summary
+        public Command PoleceniePodsumowania
         {
             get
             {
-                if (summary == null)
+                if (poleceniePodsumowania == null)
                 {
-                    summary = new Command(CreateSummary);
+                    poleceniePodsumowania = new Command(UtworzPodsumowanie);
                 }
 
-                return summary;
+                return poleceniePodsumowania;
             }
         }
 
         public MainPage()
         {
-            RoomType = new ObservableCollection<Room>
+            ListaPokoi = new ObservableCollection<Pokoj>
             {
-                new Room
+                new Pokoj
                 {
-                    Name = "Pokój jednoosobowy - 200zł / noc",
-                    Price = 200
+                    Nazwa = "Pokój jednoosobowy - 200zł / noc",
+                    Cena = 200
                 },
 
-                new Room
+                new Pokoj
                 {
-                    Name = "Pokój dwuosobowy - 300zł / noc",
-                    Price = 300
+                    Nazwa = "Pokój dwuosobowy - 300zł / noc",
+                    Cena = 300
                 },
 
-                new Room
+                new Pokoj
                 {
-                    Name = "Apartament - 500zł / noc",
-                    Price = 500
+                    Nazwa = "Apartament - 500zł / noc",
+                    Cena = 500
                 }
             };
 
-            SelectedRoom = RoomType.First();
-            MinimumDate = DateTime.Today;
-            ArrivalDate = DateTime.Today;
-            NightCount = 1;
-            GuestsCount = 1;
-            MaxGuests = 1;
+            PokojWybrany = ListaPokoi.First();
+            MinimalnaData = DateTime.Today;
+            DataPrzyjazdu = DateTime.Today;
+            LiczbaNocy = 1;
+            LiczbaGosci = 1;
+            MaksymalnaLiczbaGosci = 1;
 
             InitializeComponent();
         }

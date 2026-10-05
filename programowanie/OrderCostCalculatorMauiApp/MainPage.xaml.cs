@@ -1,5 +1,5 @@
 ﻿/*
-Zadanie – Kalkulator kosztu zamówienia
+ Zadanie – Kalkulator kosztu zamówienia
 Napisz aplikację w .NET MAUI, która pozwala obliczyć koszt prostego zamówienia.
 
 Aplikacja powinna zawierać:
@@ -38,7 +38,7 @@ namespace OrderCostCalculatorMauiApp
     {
         int count = 0;
 
-        public MainPage()   
+        public MainPage()
         {
             InitializeComponent();
         }

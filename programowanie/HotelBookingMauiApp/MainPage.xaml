@@ -1,31 +1,31 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BookingHotelMauiApp.MainPage"
-             x:Name="thisPage"
+             x:Class="HotelBookingMauiApp.MainPage"
+             x:Name="strona"
              Title="HotelBookingMauiApp"
-             BindingContext="{x:Reference thisPage}">
+             BindingContext="{x:Reference strona}">
 
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <Label Text="Imie i nazwisko:"/>
-            <Entry Text="{Binding FullName, Mode=TwoWay}"/>
+            <Entry Text="{Binding ImieINazwisko, Mode=TwoWay}"/>
 
             <Label Text="Adres e-mail:"/>
-            <Entry Text="{Binding EmailAdress, Mode=TwoWay}"/>
+            <Entry Text="{Binding AdresEmail, Mode=TwoWay}"/>
 
             <Label Text="Data przyjazdu:"/>
-            <DatePicker MinimumDate="{Binding MinimumDate}"
-                        Date="{Binding ArrivalDate, Mode=TwoWay}"/>
+            <DatePicker MinimumDate="{Binding MinimalnaData}"
+                        Date="{Binding DataPrzyjazdu, Mode=TwoWay}"/>
 
             <Label Text="Liczba nocy:"/>
 
             <StackLayout Orientation="Horizontal">
-                <Stepper Value="{Binding NightCount, Mode=TwoWay}"
+                <Stepper Value="{Binding LiczbaNocy, Mode=TwoWay}"
                          Minimum="1"
                          Maximum="14"
                          Increment="1"/>
 
-                <Label Text="{Binding NightCount}"
+                <Label Text="{Binding LiczbaNocy}"
                        Margin="10"
                        FontSize="20"/>
             </StackLayout>
@@ -33,47 +33,47 @@
             <Label Text="Liczba osób:"/>
 
             <StackLayout Orientation="Horizontal">
-                <Stepper Value="{Binding GuestsCount, Mode=TwoWay}"
+                <Stepper Value="{Binding LiczbaGosci, Mode=TwoWay}"
                          Minimum="1"
-                         Maximum="{Binding MaxGuests}"
+                         Maximum="{Binding MaksymalnaLiczbaGosci}"
                          Increment="1"/>
 
-                <Label Text="{Binding GuestsCount}"
+                <Label Text="{Binding LiczbaGosci}"
                        Margin="10"
                        FontSize="20"/>
             </StackLayout>
 
             <Label Text="Rodzaj pokoju:"/>
 
-            <Picker ItemsSource="{Binding RoomType}"
-                    ItemDisplayBinding="{Binding Name}"
-                    SelectedItem="{Binding SelectedRoom, Mode=TwoWay}"/>
+            <Picker ItemsSource="{Binding ListaPokoi}"
+                    ItemDisplayBinding="{Binding Nazwa}"
+                    SelectedItem="{Binding PokojWybrany, Mode=TwoWay}"/>
 
             <Label Text="Śniadanie"/>
 
             <StackLayout Orientation="Horizontal">
-                <Switch IsToggled="{Binding IsBreakfast, Mode=TwoWay}"/>
+                <Switch IsToggled="{Binding Sniadanie, Mode=TwoWay}"/>
 
                 <Label Text="40 zł / dzień"
-                       IsVisible="{Binding IsBreakfast}"
+                       IsVisible="{Binding Sniadanie}"
                        FontSize="20"/>
             </StackLayout>
 
             <Label Text="Miejsce parkingowe"/>
 
             <StackLayout Orientation="Horizontal">
-                <CheckBox IsChecked="{Binding IsParking, Mode=TwoWay}"/>
+                <CheckBox IsChecked="{Binding CzyParking, Mode=TwoWay}"/>
 
                 <Label Text="30 zł / dzień"
                        Margin="10"
                        FontSize="20"
-                       IsVisible="{Binding IsParking}"/>
+                       IsVisible="{Binding CzyParking}"/>
             </StackLayout>
 
             <Button Text="Oblicz koszt"
-                    Command="{Binding Calculate}"/>
+                    Command="{Binding PoleceniePodsumowania}"/>
 
-            <Label Text="{Binding SummaryCalculate}"
+            <Label Text="{Binding TekstPodsumowania}"
                    FontSize="18"
                    Margin="10"/>
         </StackLayout>
