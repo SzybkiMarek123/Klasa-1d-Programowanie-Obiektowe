@@ -25,9 +25,7 @@
                          Maximum="14"
                          Increment="1"/>
 
-                <Label Text="{Binding LiczbaNocy}"
-                       Margin="10"
-                       FontSize="20"/>
+                <Label Text="{Binding LiczbaNocy}"/>
             </StackLayout>
 
             <Label Text="Liczba osób:"/>
@@ -38,9 +36,7 @@
                          Maximum="{Binding MaksymalnaLiczbaGosci}"
                          Increment="1"/>
 
-                <Label Text="{Binding LiczbaGosci}"
-                       Margin="10"
-                       FontSize="20"/>
+                <Label Text="{Binding LiczbaGosci}"/>
             </StackLayout>
 
             <Label Text="Rodzaj pokoju:"/>
@@ -55,8 +51,7 @@
                 <Switch IsToggled="{Binding Sniadanie, Mode=TwoWay}"/>
 
                 <Label Text="40 zł / dzień"
-                       IsVisible="{Binding Sniadanie}"
-                       FontSize="20"/>
+                       IsVisible="{Binding Sniadanie}"/>
             </StackLayout>
 
             <Label Text="Miejsce parkingowe"/>
@@ -65,17 +60,13 @@
                 <CheckBox IsChecked="{Binding CzyParking, Mode=TwoWay}"/>
 
                 <Label Text="30 zł / dzień"
-                       Margin="10"
-                       FontSize="20"
                        IsVisible="{Binding CzyParking}"/>
             </StackLayout>
 
             <Button Text="Oblicz koszt"
                     Command="{Binding PoleceniePodsumowania}"/>
 
-            <Label Text="{Binding TekstPodsumowania}"
-                   FontSize="18"
-                   Margin="10"/>
+            <Label Text="{Binding TekstPodsumowania}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
