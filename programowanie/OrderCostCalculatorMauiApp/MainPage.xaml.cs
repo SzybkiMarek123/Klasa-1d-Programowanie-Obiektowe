@@ -31,27 +31,131 @@ Dla chętnych: zamiast przełącznika dostawy ekspresowej dodaj Picker, który p
 - Paczkomat – 10 zł
 Wybrany sposób dostawy uwzględnij podczas obliczania końcowej ceny zamówienia.
 */
+using OrderCostCalculatorMauiApp.Data;
+using System.Collections.ObjectModel;
+
 namespace OrderCostCalculatorMauiApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public ObservableCollection<Dostawa> DostepneDostawy { get; set; }
+        private Dostawa wybranaDostawa;
+        public Dostawa WybranaDostawa
+        {
+            get { return wybranaDostawa; }
+            set
+            {
+                wybranaDostawa = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string nazwaProduktu;
+        public string NazwaProduktu
+        {
+            get { return nazwaProduktu; }
+            set
+            {
+                nazwaProduktu = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private double cenaZaSztuke;
+        public double CenaZaSztuke
+        {
+            get { return cenaZaSztuke; }
+            set
+            {
+                cenaZaSztuke = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int liczbaSztuk;
+        public int LiczbaSztuk
+        {
+            get { return liczbaSztuk; }
+            set
+            {
+                liczbaSztuk = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string podsumowanie;
+        public string Podsumowanie
+        {
+            get { return podsumowanie; }
+            set
+            {
+                podsumowanie = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public void ObliczKoszt()
+        {
+            if (string.IsNullOrWhiteSpace(NazwaProduktu) ||
+                CenaZaSztuke <= 0 ||
+                WybranaDostawa is null)
+            {
+                Podsumowanie = "Wprowadź poprawne dane.";
+                return;
+            }
+
+            double kosztProduktu = LiczbaSztuk * CenaZaSztuke;
+            double kosztDostawy = WybranaDostawa.Cena;
+            double kosztCalkowity = kosztProduktu + kosztDostawy;
+
+            Podsumowanie =
+                $"Produkt: {NazwaProduktu}\n" +
+                $"Cena za sztukę: {CenaZaSztuke} zł\n" +
+                $"Liczba sztuk: {LiczbaSztuk}\n" +
+                $"Dostawa: {WybranaDostawa.Nazwa}\n" +
+                $"Łączny koszt: {kosztCalkowity} zł";
+        }
+
+        private Command polecenieObliczania;
+        public Command PolecenieObliczania
+        {
+            get
+            {
+                if (polecenieObliczania == null)
+                {
+                    polecenieObliczania = new Command(ObliczKoszt);
+                }
+
+                return polecenieObliczania;
+            }
+        }
 
         public MainPage()
         {
+            DostepneDostawy = new ObservableCollection<Dostawa>
+            {
+                new Dostawa
+                {
+                    Nazwa = "Odbiór osobisty - 0 zł",
+                    Cena = 0
+                },
+
+                new Dostawa
+                {
+                    Nazwa = "Kurier - 12 zł",
+                    Cena = 12
+                },
+
+                new Dostawa
+                {
+                    Nazwa = "Paczkomat - 10 zł",
+                    Cena = 10
+                }
+            };
+
+            LiczbaSztuk = 1;
+            WybranaDostawa = DostepneDostawy.First();
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 }
