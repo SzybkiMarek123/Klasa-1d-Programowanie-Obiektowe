@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsEquipmentRentalMauiApp.MainPage"
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}"
+             >
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Wybierz sprzet"/>
+            <CollectionView 
+                ItemsSource="{Binding Itemy}"
+                SelectedItem="{Binding WybranyItem,Mode=TwoWay}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Nazwa}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Imie i nazwisko"/>
+            <Entry Text="{Binding ImieINazwisko}"/>
+            <Label Text="Liczba dni wypożyczenia"/>
+            <Stepper
+                Minimum="1"
+                Maximum="7"
+                Increment="1"
+                Value="{Binding LiczbaDni,Mode=TwoWay}"/><Label Text="{Binding LiczbaDni}"/>
+            <Label Text="Ubezpieczenie"/>
+            <CheckBox IsChecked="{Binding Ubiezpieczony, Mode=TwoWay}"/>
+            <Button Text="Oblicz Koszt" Command="{Binding PodsumowanieC}"/>
+            <Label Text="{Binding Podsumowanie}"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
