@@ -37,6 +37,7 @@ Aktualna karta: house
 Przed naciśnięciem przycisku: tłumaczenie niewidoczne.
 Po naciśnięciu „Pokaż tłumaczenie”: dom.
 Po przejściu do kolejnej fiszki: tłumaczenie ponownie niewidoczne.
+adadasdadddadasdaaasdasddsaasd
 */
 namespace VocabularyFlashcardsMauiApp
 {
