@@ -249,19 +249,19 @@ namespace HotelBookingMauiApp
             {
                 new Pokoj
                 {
-                    Nazwa = "Pokój jednoosobowy - 200zł / noc",
+                    Nazwa = "Pokój jednoosobowy- 200zł",
                     Cena = 200
                 },
 
                 new Pokoj
                 {
-                    Nazwa = "Pokój dwuosobowy - 300zł / noc",
+                    Nazwa = "Pokój dwuosobowy- 300zł",
                     Cena = 300
                 },
 
                 new Pokoj
                 {
-                    Nazwa = "Apartament - 500zł / noc",
+                    Nazwa = "Apartament- 500zł",
                     Cena = 500
                 }
             };
@@ -272,7 +272,6 @@ namespace HotelBookingMauiApp
             LiczbaNocy = 1;
             LiczbaGosci = 1;
             MaksymalnaLiczbaGosci = 1;
-
             InitializeComponent();
         }
     }

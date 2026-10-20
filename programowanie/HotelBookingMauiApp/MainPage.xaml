@@ -19,25 +19,20 @@
 
             <Label Text="Liczba nocy:"/>
 
-            <StackLayout Orientation="Horizontal">
                 <Stepper Value="{Binding LiczbaNocy, Mode=TwoWay}"
                          Minimum="1"
                          Maximum="14"
                          Increment="1"/>
 
-                <Label Text="{Binding LiczbaNocy}"/>
-            </StackLayout>
+            <Label Text="{Binding LiczbaNocy}"/>
 
             <Label Text="Liczba osób:"/>
-
-            <StackLayout Orientation="Horizontal">
-                <Stepper Value="{Binding LiczbaGosci, Mode=TwoWay}"
+            <Stepper Value="{Binding LiczbaGosci, Mode=TwoWay}"
                          Minimum="1"
                          Maximum="{Binding MaksymalnaLiczbaGosci}"
                          Increment="1"/>
 
-                <Label Text="{Binding LiczbaGosci}"/>
-            </StackLayout>
+            <Label Text="{Binding LiczbaGosci}"/>
 
             <Label Text="Rodzaj pokoju:"/>
 
@@ -50,7 +45,7 @@
             <StackLayout Orientation="Horizontal">
                 <Switch IsToggled="{Binding Sniadanie, Mode=TwoWay}"/>
 
-                <Label Text="40 zł / dzień"
+                <Label Text="40 zł"
                        IsVisible="{Binding Sniadanie}"/>
             </StackLayout>
 
@@ -59,7 +54,7 @@
             <StackLayout Orientation="Horizontal">
                 <CheckBox IsChecked="{Binding CzyParking, Mode=TwoWay}"/>
 
-                <Label Text="30 zł / dzień"
+                <Label Text="30 zł"
                        IsVisible="{Binding CzyParking}"/>
             </StackLayout>
 
