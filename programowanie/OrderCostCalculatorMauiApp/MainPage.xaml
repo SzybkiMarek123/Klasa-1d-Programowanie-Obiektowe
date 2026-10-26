@@ -2,32 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OrderCostCalculatorMauiApp.MainPage"
-             x:Name="strona"
-             Title="OrderCostCalculatorApp"
-             BindingContext="{x:Reference strona}">
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}">
 
     <ScrollView>
-        <StackLayout Orientation="Vertical">
+        <VerticalStackLayout>
             <Label Text="Nazwa produktu:"/>
             <Entry Text="{Binding NazwaProduktu, Mode=TwoWay}"/>
             <Label Text="Cena za sztukę:"/>
-            <Entry Text="{Binding CenaZaSztuke, Mode=TwoWay}"
-                   Keyboard="Numeric"/>
+            <Entry Text="{Binding CenaZaSztuke, Mode=TwoWay}"/>
             <Label Text="Liczba sztuk:"/>
-            <StackLayout Orientation="Horizontal">
-                <Stepper Minimum="1"
+            <Stepper Minimum="1"
                          Maximum="10"
                          Increment="1"
                          Value="{Binding LiczbaSztuk, Mode=TwoWay}"/>
-                <Label Text="{Binding LiczbaSztuk}"
-                       Margin="10"
-                       FontSize="20"/>
-            </StackLayout>
-            <Picker ItemDisplayBinding="{Binding Nazwa}"
-                    ItemsSource="{Binding DostepneDostawy}"
-                    SelectedItem="{Binding WybranaDostawa, Mode=TwoWay}"/>
-            <Button Text="Oblicz" Command="{Binding PolecenieObliczania}"/>
+            <Label Text="{Binding LiczbaSztuk}"/>
+            <Label Text="Dostawa ekspresowa (+15 zł):"/>
+            <Switch IsToggled="{Binding DostawaEkspresowa, Mode=TwoWay}"/>
+            <Button Text="Oblicz"
+                    Command="{Binding PolecenieObliczania}"/>
             <Label Text="{Binding Podsumowanie}"/>
-        </StackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

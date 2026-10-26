@@ -2,54 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VocabularyFlashcardsMauiApp.MainPage"
-             x:Name="thisPage"
-             BindingContext="{x:Reference thisPage}">
-
+             x:Name="thisPage">
     <ScrollView>
-        <VerticalStackLayout>
-            <CarouselView ItemsSource="{Binding Karty}"
-                          IndicatorView="KartyIndicator">
+        <VerticalStackLayout Padding="20">
+            <CarouselView x:Name="Karuzela"
+                          ItemsSource="{Binding Karty}"
+                          IndicatorView="{x:Reference KartyIndicator}"
+                          CurrentItemChanged="KaruzelaZ">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Border Margin="50"
-                                Padding="50"
+                        <Border Margin="20"
+                                Padding="30"
                                 HeightRequest="250"
                                 Stroke="DarkGray"
                                 BackgroundColor="Bisque"
-                                StrokeShape="RoundRectangle 5"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center">
-                            <StackLayout>
-                                <Label
-                                FontAttributes="Bold"
-                                FontSize="18"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Text="{Binding Angielski}"/>
-                            </StackLayout>
+                                StrokeShape="RoundRectangle 5">
+                            <Label Text="{Binding Angielski}"
+                                   FontAttributes="Bold"
+                                   FontSize="28"
+                                   TextColor="Black"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <IndicatorView x:Name="KartyIndicator"
-                           Margin="20"
+                           Margin="10"
                            HorizontalOptions="Center"
-                           IndicatorColor="Bisque"
-                           IndicatorSize="10"/>
-            <Button Text="Pokaż tłumaczenie" Command="{Binding Tlumaczenie}"
+                           IndicatorColor="Gray"
+                           SelectedIndicatorColor="Black"
+                           IndicatorSize="10" />
+            <Button Text="Pokaż tłumaczenie"
+                    Command="{Binding Tlumaczenie}"
                     BackgroundColor="Bisque"
                     TextColor="Black"
-                    Margin="10"/>
+                    Margin="10" />
             <Label Text="{Binding TekstT}"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   TextColor="Black"
                    IsVisible="{Binding Widoczne}"
-                   />
-            <Button Text="Zacznij od początku" Command="{Binding Reset}"
+                   FontSize="24"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Margin="10" />
+            <Button Text="Zacznij od początku"
+                    Command="{Binding Reset}"
                     BackgroundColor="Bisque"
                     TextColor="Black"
-                    Margin="10"/>
+                    Margin="10" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

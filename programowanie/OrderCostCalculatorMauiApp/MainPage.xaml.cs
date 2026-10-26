@@ -1,55 +1,7 @@
-﻿/*
-Zadanie – Kalkulator kosztu zamówienia
-Napisz aplikację w .NET MAUI, która pozwala obliczyć koszt prostego zamówienia.
-
-Aplikacja powinna zawierać:
-- pole Nazwa produktu (Entry),
-- pole Cena za sztukę (Entry),
-- wybór liczby sztuk za pomocą kontrolki Stepper (od 1 do 10),
-- Label wyświetlający aktualnie wybraną liczbę sztuk,
-- przełącznik Dostawa ekspresowa (Switch),
-- przycisk Oblicz,
-- Label wyświetlający podsumowanie zamówienia i końcową cenę.
-
-Zasady obliczeń:
-Koszt zamówienia oblicz według wzoru:
-cena za sztukę × liczba sztuk
-Jeśli użytkownik włączy dostawę ekspresową, do ceny zamówienia należy doliczyć 15 zł.
-
-Przykład:
-Produkt: Słuchawki
-Cena za sztukę: 120 zł
-Liczba sztuk: 3
-Dostawa ekspresowa: TAK  
-Wynik: 375 zł
-
-
-
-Dla chętnych: zamiast przełącznika dostawy ekspresowej dodaj Picker, który pozwala wybrać sposób dostawy:
-- Odbiór osobisty – 0 zł
-- Kurier – 12 zł
-- Paczkomat – 10 zł
-Wybrany sposób dostawy uwzględnij podczas obliczania końcowej ceny zamówienia.
-*/
-using OrderCostCalculatorMauiApp.Data;
-using System.Collections.ObjectModel;
-
-namespace OrderCostCalculatorMauiApp
+﻿namespace OrderCostCalculatorMauiApp
 {
     public partial class MainPage : ContentPage
     {
-        public ObservableCollection<Dostawa> DostepneDostawy { get; set; }
-        private Dostawa wybranaDostawa;
-        public Dostawa WybranaDostawa
-        {
-            get { return wybranaDostawa; }
-            set
-            {
-                wybranaDostawa = value;
-                OnPropertyChanged();
-            }
-        }
-
         private string nazwaProduktu;
         public string NazwaProduktu
         {
@@ -83,6 +35,17 @@ namespace OrderCostCalculatorMauiApp
             }
         }
 
+        private bool dostawaEkspresowa;
+        public bool DostawaEkspresowa
+        {
+            get { return dostawaEkspresowa; }
+            set
+            {
+                dostawaEkspresowa = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string podsumowanie;
         public string Podsumowanie
         {
@@ -98,25 +61,27 @@ namespace OrderCostCalculatorMauiApp
         {
             if (string.IsNullOrWhiteSpace(NazwaProduktu) ||
                 CenaZaSztuke <= 0 ||
-                WybranaDostawa is null)
+                LiczbaSztuk < 1 ||
+                LiczbaSztuk > 10)
             {
                 Podsumowanie = "Wprowadź poprawne dane.";
                 return;
             }
 
-            double kosztProduktu = LiczbaSztuk * CenaZaSztuke;
-            double kosztDostawy = WybranaDostawa.Cena;
+            double kosztProduktu = CenaZaSztuke * LiczbaSztuk;
+            double kosztDostawy = DostawaEkspresowa ? 15 : 0;
             double kosztCalkowity = kosztProduktu + kosztDostawy;
 
             Podsumowanie =
                 $"Produkt: {NazwaProduktu}\n" +
-                $"Cena za sztukę: {CenaZaSztuke} zł\n" +
+                $"Cena za sztukę: {CenaZaSztuke:F2} zł\n" +
                 $"Liczba sztuk: {LiczbaSztuk}\n" +
-                $"Dostawa: {WybranaDostawa.Nazwa}\n" +
-                $"Łączny koszt: {kosztCalkowity} zł";
+                $"Dostawa ekspresowa: {(DostawaEkspresowa ? "TAK" : "NIE")}\n" +
+                $"Łączny koszt: {kosztCalkowity:F2} zł";
         }
 
         private Command polecenieObliczania;
+
         public Command PolecenieObliczania
         {
             get
@@ -132,30 +97,9 @@ namespace OrderCostCalculatorMauiApp
 
         public MainPage()
         {
-            DostepneDostawy = new ObservableCollection<Dostawa>
-            {
-                new Dostawa
-                {
-                    Nazwa = "Odbiór osobisty - 0 zł",
-                    Cena = 0
-                },
-
-                new Dostawa
-                {
-                    Nazwa = "Kurier - 12 zł",
-                    Cena = 12
-                },
-
-                new Dostawa
-                {
-                    Nazwa = "Paczkomat - 10 zł",
-                    Cena = 10
-                }
-            };
-
-            LiczbaSztuk = 1;
-            WybranaDostawa = DostepneDostawy.First();
             InitializeComponent();
+            LiczbaSztuk = 1;
+            BindingContext = this;
         }
     }
 }
