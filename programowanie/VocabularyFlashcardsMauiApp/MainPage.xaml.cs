@@ -39,12 +39,65 @@ Po naciśnięciu „Pokaż tłumaczenie”: dom.
 Po przejściu do kolejnej fiszki: tłumaczenie ponownie niewidoczne.
 adadasdadddadasdaaasdasddsaasd
 */
+using System.Collections.ObjectModel;
+using VocabularyFlashcardsMauiApp.Data;
 namespace VocabularyFlashcardsMauiApp
 {
     public partial class MainPage : ContentPage
     {
+        public ObservableCollection<Karty> Karty { get; set; }
+        private bool widoczne;
+        public bool Widoczne
+        {
+            get
+            {
+                return widoczne;
+            }
+            set
+            {
+                widoczne = value;
+                OnPropertyChanged();
+            }
+        }
+        private string tekstT;
+        public string TekstT
+        {
+            get
+            {
+                return tekstT;
+            }
+            set
+            {
+                tekstT = value;
+                OnPropertyChanged();
+            }
+        }
         public MainPage()
         {
+            Karty = new ObservableCollection<Karty>
+            {
+             new Karty{
+             Angielski = "Apple",
+             Polski = "Jabłko"
+             },
+             new Karty{
+             Angielski = "House",
+             Polski = "Dom"
+             },
+             new Karty{
+             Angielski = "Dog",
+             Polski = "Pies"
+             },
+             new Karty{
+             Angielski = "Book",
+             Polski = "Książka"
+             },
+             new Karty{
+             Angielski = "Bike",
+             Polski = "Rower"
+             }
+            };
+
             InitializeComponent();
         }
     }
